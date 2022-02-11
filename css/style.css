@@ -1,0 +1,100 @@
+body {
+    margin: 0;
+}
+
+.scroll_searchbar {
+    font-family: tahoma;
+    background-position: 5px;
+    background-repeat: no-repeat;
+    height: 38px;
+    width: 100%;
+    font-size: 16px;
+    line-height: 32px;
+    border: 3px solid #333333;
+    padding-left: 28px;
+    background-color: #216a7a;
+}
+
+.scroll_searchbar {background-image: url("../icons/search.svg")}
+
+::placeholder {
+  color: black;
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  color: black;
+}
+
+.y-scrollable {
+    cursor: auto;
+    position: absolute;
+    top: 38px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #333333;
+    overflow-y: scroll;
+}
+
+.scroll_list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.scroll_list li {
+    position: relative;
+    height: 38px;
+    background-color: #333333;
+    background-position: 5px;
+    background-repeat: no-repeat;
+    background-size: 20px;
+}
+
+.scroll_list li:nth-child(2n) {
+    background-color: #3e3e3e;
+}
+
+.scroll_list li.selected {
+    background-color: #855700;
+}
+
+.scroll_list li a.filelink {
+    font-family: tahoma;
+    border: 3px solid transparent;
+    line-height: 28px;
+    padding-left: 33px;
+    padding-right: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #FCFCFC;
+    display: inline-block;
+    outline: none;
+    cursor: default;
+    white-space: nowrap;
+}
+
+.scroll_list li a.filelink:hover {
+    border: 3px solid #855700;
+}
+
+li.pdf {background-image: url("../icons/pdf.svg")}
+li.txt {background-image: url("../icons/txt.svg")}
+li.link {background-image: url("../icons/link.svg")}
+
+a#github_link {
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    width: 32px;
+    height: 32px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 32px;
+}
+
+a#github_link {background-image: url("../icons/github.svg")}
+a#github_link:hover {filter: invert(18%) sepia(20%) saturate(0%) hue-rotate(144deg) brightness(99%) contrast(99%);}
+a#github_link:active {filter: invert(37%) sepia(0%) saturate(0%) hue-rotate(147deg) brightness(91%) contrast(93%);}

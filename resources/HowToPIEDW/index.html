@@ -1,0 +1,108 @@
+<html>
+<head>
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="MobileOptimized" content="320"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width, user-scalable=yes"/>
+    <meta charset="utf-8">
+    <title>How to PIEDW</title>
+    <meta name="author" content="doakey3">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <meta name="description" content="A guide for feeding MRNs to PIEDW to get a list of phone numbers and addresses.">
+    <meta name="keywords" content="how, to, piedw, powerinsight, enterprise, data, warehouse">
+    
+    <style>
+        p {
+            color: darkgreen;
+        }
+        img {
+            padding: 10px;
+            border: 3px solid lightgray;
+            max-width: calc(100% - 20px);
+            margin-bottom: 20px;
+            display: block;
+        }
+        h1 {
+            text-align: center;
+        }
+    </style>
+    
+</head>
+
+<body>
+    <h1>How to PIEDW</h1>
+    <p>In this demo, I will show you how to use MRN's from the Dynamic Worklist to generate a list of phone numbers and home addresses.</p>
+    <h2>Opening PIEDW</h2>
+    <img src="media/citrix_storefront.jpg">
+    <img src="media/click_legal.jpg">
+    <img src="media/bi_launchpad.jpg">
+    <h2>Creating a Personal Folder to Save Report Setups</h2>
+    <img src="media/click_documents.png">
+    <img src="media/click_folders.png">
+    <img src="media/click_public_folders.png">
+    <img src="media/new_folder.png">
+    <img src="media/your_name_here.png">
+    <img src="media/my_folder.png">
+    <h2>Generating a Report</h2>
+    <img src="media/click_application.png">
+    <img src="media/new_report.png">
+    <img src="media/universe.png">
+    <img src="media/ODS_Clinical_Outcomes.png">
+    <img src="media/find_person_name.png">
+    <img src="media/drag_object.png">
+    <img src="media/build_this.png">
+    <img src="media/run_query.png">
+    <img src="media/select_design.png">
+    <img src="media/getting_objects.png">
+    <img src="media/save_as.png">
+    <img src="media/public_folders.png">
+    <img src="media/development.png">
+    <img src="media/save_as_name.png">
+    <h2>Getting the MRN's</h2>
+    <p>Go to powerchart and export your worklist.</p>
+    <img src="media/exporting_dynamic_worklist.png">
+    <p>Open the file in Excel, right click the MRN column</p>
+    <img src="media/formatting_cell.png">
+    <img src="media/setting_format.png">
+    <p>Copy the MRN numbers</p>
+    <p>Note: We need the MRN numbers to be formatted as a semicolon-separated list without spaces. For example:</p>
+    <span>1234567000001;1234567000002;1234567000003;1234567000004;1234567000005</span>
+    <br><br>
+    <img src="media/back_to_structuring.png">
+    <img src="media/pasting_MRNs.png">
+    <h2>Exporting from PIEDW</h2>
+    <img src="media/exporting.png">
+    <img src="media/excel.png">
+</body>
+
+<!--
+<script>
+    var split_lines = function(text) {
+        // Split lines by newlines, even newlines of different formats
+        var re=/\r\n|\n\r|\n|\r/g;
+        var lines = text.replace(re,"\n").split("\n");
+        for (var i = 0; i < lines.length; i++) {
+            lines[i] = lines[i].replace(/\s+$/, "");
+        }
+        return lines;
+    }
+    
+    var rstrip = function(text) {
+        return text.replace(/\s+$/, "");
+    }
+        
+    document.getElementById("converter").addEventListener("click", function() {
+        var textarea = document.getElementById("linebreaked_text");
+        var text = textarea.value;
+        var lines = split_lines(text);
+        for (var i = 0; i < lines.length; i++) {
+            lines[i] = rstrip(lines[i]);
+        }
+        lines = lines.filter(function(el) {
+            return el != "";
+        });
+        
+        textarea.value = lines.join(";");
+    });
+</script>
+-->
+</html>
