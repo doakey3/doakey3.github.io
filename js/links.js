@@ -130,7 +130,7 @@ var links = {
         "url": "https://www.hqrio.afrc.af.mil/Portals/149/Forms/AF%20Forms/AF988.pdf"
     },
     "Express Scripts Provider Portal": {
-        "description": "For approving/editing patient prescriptions on Express Scripts. Note: if you are unfortunate to have to call these people, call 1-866-684-4488 to talk to a Tricare specialist.",
+        "description": "For approving/editing patient prescriptions on Express Scripts.",
         "keywords": "prescribe, prescription, medication, medicine, drug, approve, link",
         "url": "https://portal.mtfprovider.express-scripts.com/frontend/mtfportal/#/"
     },
@@ -225,7 +225,7 @@ var links = {
     },
     "VisualDX": {
         "description": "Tool for nailing the diagnosis with the help of AI",
-        "keywords": "visual, dx, visualdx, diagnosis, ai, artificial, intelligence",
+        "keywords": "visual, dx, visualdx, diagnosis",
         "url": "https://www.visualdx.com/visualdx/7/"
     },
     "USPSTF A and B Recommendations": {
