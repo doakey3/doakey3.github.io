@@ -97,7 +97,7 @@ var links = {
     "Bright Futures Year 05-06": {
         "description": "Tips for raising a child at age 5-6",
         "keywords": "guide, preventative, anticipatory, guidance, ped, peds, pediatric, anticipate",
-        "url": "http://content.opmedrecords.com/bf/data/files/VisitForms/5,%206%20Year/C.MCh.PH.5,6yr.pdf",
+        "url": "http://content.opmedrecords.com/bf/data/files/VisitForms/5,%206%20Year/C.MCh.PH.5,6yr.pdf"
     },
     "Bright Futures Year 07-08": {
         "description": "Tips for raising a child at age 7-8",
@@ -137,7 +137,7 @@ var links = {
     "EMRA Splinting Guide (PDF)": {
         "description": "Instructions for splinting various common orthopedic problems",
         "keywords": "emra, splinting, guide, ortho, orthopedic, instructions",
-        "https://www.emra.org/globalassets/emra/publications/reference-cards/emra_sportsmedicine_splint_guide.pdf"
+        "url": "https://www.emra.org/globalassets/emra/publications/reference-cards/emra_sportsmedicine_splint_guide.pdf"
     },
     "FRAX Risk Calculator": {
         "description": "A calculator for evaluating a patient's risk of fractures related to osteoporosis.",
@@ -235,3 +235,4 @@ var links = {
         "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation-topics/uspstf-and-b-recommendations"
     },
 }
+
