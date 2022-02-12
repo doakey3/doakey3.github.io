@@ -136,7 +136,8 @@ var links = {
     },
     "EMRA Splinting Guide (PDF)": {
         "description": "Instructions for splinting various common orthopedic problems",
-        "keywords": "emra, splinting, guide, ortho, orthopedic, instructions"
+        "keywords": "emra, splinting, guide, ortho, orthopedic, instructions",
+        "https://www.emra.org/globalassets/emra/publications/reference-cards/emra_sportsmedicine_splint_guide.pdf"
     },
     "FRAX Risk Calculator": {
         "description": "A calculator for evaluating a patient's risk of fractures related to osteoporosis.",
