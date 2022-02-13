@@ -10,10 +10,12 @@
     <meta name="keywords" content="death, note, template, deceased, dead, died">
     
     <link rel="stylesheet" href="css/grow_wrap.css">
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
 
-<body style="margin: 0;">
+<body>
+<h1>Death Note Template</h1>
 <div class="grow-wrap">
 <textarea class="checkable resizable" spellcheck="false" autocomplete="off">
 Events:
@@ -34,8 +36,26 @@ Contributing Factors: [FACTORS]
 Physician: [NAME]
 </textarea>
 </div>
+
+<div id="disclaimer">
+    <p>This page was last updated on <span class="last_updated"></span></p>
+    <p><b>Disclaimer</b>: Information presented in the template should be re-checked and should not be used alone to guide patient care or substitute for clinical judgement.</p>
+    <p><b>Note</b>: Please copy text into the EMR prior to adding any HIPPA information. Though no information is being saved/transmitted on this site, typing private information into a web page is generally bad practice.</p>
+</div>
+
 </body>
 <script src="js/setup_resizables.js"></script>
 <script src="js/setup_boxes.js"></script>
-
+<script>
+    var textarea = document.getElementsByClassName("checkable")[0];
+    textarea.focus();
+</script>
+<script>
+    last_updateds = document.getElementsByClassName("last_updated");
+    for (var i = 0; i < last_updateds.length; i++) {
+        var mydate = new Date(document.lastModified);
+        var newdate = new Intl.DateTimeFormat("en-US", {year: "numeric", month: "long", day: "numeric"}).format(mydate).replace(/\./g, '-');
+        last_updateds[i].innerHTML = newdate;
+    } 
+</script>
 </html>

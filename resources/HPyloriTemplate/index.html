@@ -10,10 +10,12 @@
     <meta name="keywords" content="helicobacter, pylori, h, peptic, ulcer, disease, stomach, dyspepsia, template">
     
     <link rel="stylesheet" href="css/grow_wrap.css">
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
 
-<body style="margin: 0;">
+<body>
+<h1>Helicobacter Pylori Template</h1>
 <div class="grow-wrap">
 <textarea class="checkable resizable" spellcheck="false" autocomplete="off">
 Alarm Signs for risk of Gastric Cancer: (May indicate urgent referral for EGD)
@@ -62,22 +64,31 @@ QUADRUPLE THERAPY:
 </textarea>
 </div>
 
-<div class="references">
+<div id="references">
     <h2>References</h2>
     <ul>
         <li>AAFP. <a href="https://www.aafp.org/afp/2018/0115/p135.html">H. pylori Infection: ACG Updates Treatment Recommendations</a>. Indications to test.</li>
-        <li>AAFP. <a href="https://www.aafp.org/afp/2002/0401/p1327.html">Management of Helicobacter pylori</a>. For a list of alarm symptoms. A similar list is found on Uptodate's "Indications and diagnostic tests for H pylor infection in adults"</li>
+        <li>AAFP. <a href="https://www.aafp.org/afp/2002/0401/p1327.html">Management of Helicobacter pylori</a>. For a list of alarm symptoms. A similar list is found on Uptodate's "Indications and diagnostic tests for H pylori infection in adults"</li>
         <li>Uptodate. <a href="https://www.uptodate.com/contents/treatment-regimens-for-helicobacter-pylori-in-adults">Treatment regimens for Helicobacter pylori in adults</a></li>
         <li>Uptodate. <a href="https://www.uptodate.com/contents/indications-and-diagnostic-tests-for-helicobacter-pylori-infection-in-adults">Indications and diagnostic tests for Helicobacter pylori infection in adults</a>. Explains waiting period after ABX, PPI, or Pepto before testing. Gives instructions for quadruple therapy.</li>
     </ul>
-<p>This page was last updated on <span class="last_updated"></span></p>
-<p>Disclaimer: Information presented in the template should be re-checked and should not be used alone to guide patient care or substitute for clinical judgement.</p>
+</div>
+
+<div id="disclaimer">
+    <p>This page was last updated on <span class="last_updated"></span></p>
+    <p><b>Disclaimer</b>: Information presented in the template should be re-checked and should not be used alone to guide patient care or substitute for clinical judgement.</p>
+    <p><b>Note</b>: Please copy text into the EMR prior to adding any HIPPA information. Though no information is being saved/transmitted on this site, typing private information into a web page is generally bad practice.</p>
 </div>
 
 </body>
 
 <script src="js/setup_resizables.js"></script>
 <script src="js/setup_boxes.js"></script>
+
+<script>
+    var textarea = document.getElementsByClassName("checkable")[0];
+    textarea.focus();
+</script>
 <script>
     last_updateds = document.getElementsByClassName("last_updated");
     for (var i = 0; i < last_updateds.length; i++) {
@@ -86,4 +97,5 @@ QUADRUPLE THERAPY:
         last_updateds[i].innerHTML = newdate;
     } 
 </script>
+
 </html>

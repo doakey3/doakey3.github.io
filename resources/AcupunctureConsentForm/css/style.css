@@ -1,0 +1,52 @@
+body {
+    font-family: arial;
+    margin: 0;
+}
+
+.page {
+    width: 8in;
+    height: 10.5in;
+    padding: 0.25in;
+    border: 1px dashed black;
+    page-break-after: always;
+    margin-bottom: 2em;
+}
+
+li {
+    font-size: inherit;
+}
+h1 {
+    margin-top: 0;
+    text-align: center;
+    font-size: 175%;
+}
+h2 {
+    margin-top: 0;
+    font-size: 150%;
+}
+.initials {
+    display: inline-block;
+    width: 6ch;
+    border-bottom: 2px solid black;
+}
+.bb {
+    border-bottom: 2px solid black;
+    display: block;
+    width: 90%;
+    height: 1.5em;
+    line-height: 1.5em;
+    text-align: left;
+}
+p {
+    page-break-inside: avoid;
+}
+
+@media print {
+    .page {
+        border: none;
+        padding: 0;
+        max-width: 8in;
+        max-height: 10.5in;
+        margin-bottom: 0;
+    }
+}

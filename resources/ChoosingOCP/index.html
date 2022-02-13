@@ -10,6 +10,7 @@
     <meta name="keywords" content="ocp, oral, contraceptive, combined, birth, control, period, menstrual">
     
     <link rel="stylesheet" href="css/grow_wrap.css">
+    <link rel="stylesheet" href="css/style.css">
     
     <style>
         #probsoln {
@@ -23,7 +24,8 @@
     
 </head>
 
-<body style="margin: 0;">
+<body>
+<h1>Choosing a Combined Oral Contraceptive</h1>
 <div class="grow-wrap">
 <textarea class="checkable resizable" spellcheck="false" autocomplete="off">
 Key History:
@@ -93,7 +95,8 @@ Counseling points:
 - Almost all women will have a return of normal menses and fertility by 90 days after stopping combined oral contraceptives
 </textarea>
 </div>
-<br>
+
+<div id="notes">
 <p>Guidelines: Where possible, use a monophasic pill with the 24/4 pattern (24 treatment days, 4 placebo).</p>
 <p>Aura: sensory disturbance that may include flashes of light, blind spots, and tingling in hands or face that precede a migraine headache.</p>
 <p>(Note, for this table, the full list of treatment options is huge. I just focused on what I would try first in a patient.)</p>
@@ -139,8 +142,9 @@ Counseling points:
 <br>
 
 <img src="media/Quickstartmethod.png">
+</div>
 
-<div class="references">
+<div id="references">
     <h2>References</h2>
     <ul>
         <li>Uptodate. <a href="https://www.uptodate.com/contents/combined-estrogen-progestin-oral-contraceptives-patient-selection-counseling-and-use">Combined estrogen-progestin oral contraceptives: Patient selection, counseling, and use</a></li>
@@ -149,14 +153,22 @@ Counseling points:
         <li>Uptodate. <a href="https://www.uptodate.com/contents/estrogen-associated-migraine-including-menstrual-migraine">Estrogen-associated migraine, including menstrual migraine</a>.</li>
         <li>Uptodate. <a href="https://www.uptodate.com/contents/treatment-of-premenstrual-syndrome-and-premenstrual-dysphoric-disorder">Treatment of premenstrual syndrome and premenstrual dysphoric disorder</a>.</li>
     </ul>
-<p>This page was last updated on <span class="last_updated"></span></p>
-<p>Disclaimer: Information presented in the template should be re-checked and should not be used alone to guide patient care or substitute for clinical judgement.</p>
+</div>
+
+<div id="disclaimer">
+    <p>This page was last updated on <span class="last_updated"></span></p>
+    <p><b>Disclaimer</b>: Information presented in the template should be re-checked and should not be used alone to guide patient care or substitute for clinical judgement.</p>
+    <p><b>Note</b>: Please copy text into the EMR prior to adding any HIPPA information. Though no information is being saved/transmitted on this site, typing private information into a web page is generally bad practice.</p>
 </div>
 
 </body>
 
 <script src="js/setup_resizables.js"></script>
 <script src="js/setup_boxes.js"></script>
+<script>
+    var textarea = document.getElementsByClassName("checkable")[0];
+    textarea.focus();
+</script>
 <script>
     last_updateds = document.getElementsByClassName("last_updated");
     for (var i = 0; i < last_updateds.length; i++) {

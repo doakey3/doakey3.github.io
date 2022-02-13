@@ -10,15 +10,14 @@
     <meta name="keywords" content="ibs, irritable, bowel, syndrome">
     
     <link rel="stylesheet" href="css/grow_wrap.css">
+    <link rel="stylesheet" href="css/style.css">
 
     <style>
-        body {
-            font-family: tahoma;
-        }
         #bristol {
             border-collapse: collapse;
             border: 2px solid black;
             margin: 1em;
+            background-color: white;
         }
         #bristol td, #bristol th {
             padding: 1em;
@@ -38,7 +37,8 @@
 
 </head>
 
-<body style="margin: 0;">
+<body>
+<h1>IBS Template</h1>
 <div class="grow-wrap">
 <textarea class="checkable resizable" spellcheck="false" autocomplete="off">
 DIAGNOSTIC CRITERIA FOR IBS (Rome Criteria):
@@ -90,7 +90,8 @@ Spasm-like Abdominal Pain
 - short term use of dicyclomine 20 mg PO QID PRN
 </textarea>
 </div>
-<br>
+
+<div id="notes">
 <a style="margin-left: 1em;" href="../FODMAPFoods" target="_blank">FODMAP Foods</a>
 <br><br>
 <img src="media/metamucil.jpg">
@@ -136,6 +137,7 @@ Spasm-like Abdominal Pain
         <td>Watery, no solid pieces, ENTIRELY LIQUID</td>
     </tr>
 </table>
+</div>
 
 <div class="references">
     <h2>References</h2>
@@ -143,14 +145,22 @@ Spasm-like Abdominal Pain
         <li>Uptodate. <a href="https://www.uptodate.com/contents/treatment-of-irritable-bowel-syndrome-in-adults#!">Treatment of irritable bowel syndrome in adults</a></li>
         <li>AAFP. <a href="https://www.aafp.org/afp/2012/0901/p419.html">Diagnosis and Management of IBS in Adults</a></li>
     </ul>
-<p>This page was last updated on <span class="last_updated"></span></p>
-<p>Disclaimer: Information presented in the template should be re-checked and should not be used alone to guide patient care or substitute for clinical judgement.</p>
+</div>
+
+<div id="disclaimer">
+    <p>This page was last updated on <span class="last_updated"></span></p>
+    <p><b>Disclaimer</b>: Information presented in the template should be re-checked and should not be used alone to guide patient care or substitute for clinical judgement.</p>
+    <p><b>Note</b>: Please copy text into the EMR prior to adding any HIPPA information. Though no information is being saved/transmitted on this site, typing private information into a web page is generally bad practice.</p>
 </div>
 
 </body>
 
 <script src="js/setup_resizables.js"></script>
 <script src="js/setup_boxes.js"></script>
+<script>
+    var textarea = document.getElementsByClassName("checkable")[0];
+    textarea.focus();
+</script>
 <script>
     last_updateds = document.getElementsByClassName("last_updated");
     for (var i = 0; i < last_updateds.length; i++) {

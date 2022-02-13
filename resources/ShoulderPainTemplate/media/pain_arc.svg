@@ -2,12 +2,12 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="67.906441mm"
-   height="105.5256mm"
-   viewBox="0 0 67.90644 105.5256"
+   width="67.957497mm"
+   height="105.63323mm"
+   viewBox="0 0 67.957496 105.63324"
    version="1.1"
    id="svg5"
-   inkscape:version="1.1 (c4e8f9ed74, 2021-05-24)"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20, custom)"
    sodipodi:docname="pain_arc.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -23,9 +23,9 @@
      inkscape:pagecheckerboard="true"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="1.4877245"
-     inkscape:cx="155.94285"
-     inkscape:cy="160.98411"
+     inkscape:zoom="1.0519801"
+     inkscape:cx="257.60944"
+     inkscape:cy="27.091768"
      inkscape:window-width="1920"
      inkscape:window-height="1023"
      inkscape:window-x="0"
@@ -604,7 +604,15 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-16.034472,-8.632001)">
+     transform="translate(-16.034472,-8.6320009)">
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke-width:0.0425227"
+       id="rect915"
+       width="67.957497"
+       height="105.63323"
+       x="16.034472"
+       y="8.6320009"
+       ry="0" />
     <g
        id="g45453"
        transform="matrix(1.0184712,0,0,1.010582,-50.288303,-47.243056)">

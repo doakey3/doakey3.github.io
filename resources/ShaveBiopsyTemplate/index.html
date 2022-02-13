@@ -10,6 +10,7 @@
     <meta name="keywords" content="shave, biopsy, skin, cancer, melanoma, nevus, atypical, melanocytic, mole, basal, cell, carcinoma, template">
     
     <link rel="stylesheet" href="css/grow_wrap.css">
+    <link rel="stylesheet" href="css/style.css">
     
     <style>
         .codes {
@@ -22,7 +23,8 @@
     </style>
 </head>
 
-<body style="margin: 0;">
+<body>
+<h1>Shave Biopsy Template</h1>
 <div class="grow-wrap">
 <textarea class="checkable resizable" spellcheck="false" autocomplete="off">
 Risks Discussed with patient:
@@ -48,29 +50,27 @@ Call the clinic or go to the ER depending on severity for:
 - worsening redness
 </textarea>
 </div>
-<video width="320" height="240" controls>
-    <source src="media/shave.mp4" type="video/mp4">
-</video>
-<br><br>
-<table class="codes">
-    <tr>
-        <td>ICD10</td>
-        <td>Code Name</td>
-        <td>CPT</td>
-    </tr>
-    <tr>
-        <td>D22.9</td>
-        <td>Atypical nevus of skin</td>
-        <td>11100</td>
-    </tr>
-</table>
 
-<p>This page was last updated on <span class="last_updated"></span></p>
-<p>Disclaimer: Information presented in the template should be re-checked and should not be used alone to guide patient care or substitute for clinical judgement.</p>
+<div id="notes">
+    <video width="320" height="240" controls>
+        <source src="media/shave.mp4" type="video/mp4">
+    </video>
+</div>
+
+<div id="disclaimer">
+    <p>This page was last updated on <span class="last_updated"></span></p>
+    <p><b>Disclaimer</b>: Information presented in the template should be re-checked and should not be used alone to guide patient care or substitute for clinical judgement.</p>
+    <p><b>Note</b>: Please copy text into the EMR prior to adding any HIPPA information. Though no information is being saved/transmitted on this site, typing private information into a web page is generally bad practice.</p>
+</div>
+
 </body>
 
 <script src="js/setup_resizables.js"></script>
 <script src="js/setup_boxes.js"></script>
+<script>
+    var textarea = document.getElementsByClassName("checkable")[0];
+    textarea.focus();
+</script>
 <script>
     last_updateds = document.getElementsByClassName("last_updated");
     for (var i = 0; i < last_updateds.length; i++) {

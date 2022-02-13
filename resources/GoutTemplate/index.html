@@ -7,13 +7,15 @@
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <meta name="author" content="doakey3"> 
     <meta name="description" content="A template for charting on gout">
-    <meta name="keywords" content="gout, uric, acid, urate, tophi, crystals, arthritis">
+    <meta name="keywords" content="gout, uric, acid, urate, tophi, crystals, arthritis, template">
     
     <link rel="stylesheet" href="css/grow_wrap.css">
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
 
-<body style="margin: 0;">
+<body>
+<h1>Gout Template</h1>
 <div class="grow-wrap">
 <textarea class="checkable resizable" spellcheck="false" autocomplete="off">
 Clinical Diagnosis of Gout (&lt;= 4 points: low probability; 4-8 points: intermmediate probability; &gt; 8 points: high probability):
@@ -95,29 +97,42 @@ FEBUXOSTAT REGIMEN: (Japan's recommended regimen)
 </textarea>
 </div>
 
-<img src="media/p450_inhibitors.png">
-<br>
-<img src="media/pgp_inhibitors.png">
-<br>
-<img src="media/tophi.jpg">
-<br>
-<img src="media/ULTgout.gif">
-<br>
-
-<div class="references">
-<h2>References</h2>
-<p>
-<p>Uptodate. <a href="https://www.uptodate.com/contents/treatment-of-gout-flares">Treatment of Gout Flares</a> Treatment algorithm for acute flares</p>
-<p>Uptodate. <a href="https://www.uptodate.com/contents/clinical-manifestations-and-diagnosis-of-gout">Clinical manifestations and diagnosis of gout</a> Diagnosing gout</p>
-<P>Uptodate. <a href="https://www.uptodate.com/contents/pharmacologic-urate-lowering-therapy-and-treatment-of-tophi-in-patients-with-gout">Pharmacologic urate-lowering therapy and treatment of tophi in patients with gout</a></p>
+<div id="notes">
+    <img src="media/p450_inhibitors.png">
+    <br>
+    <img src="media/pgp_inhibitors.png">
+    <br>
+    <figure>
+        <img src="media/tophi.jpg">
+        <figcaption>Tophaceous Gout</figcaption>
+    </figure>
+    <br>
+    <img src="media/ULTgout.gif">
 </div>
 
-<p>This page was last updated on <span class="last_updated"></span></p>
-<p>Disclaimer: Information presented in the template should be re-checked and should not be used alone to guide patient care or substitute for clinical judgement.</p>
+<div id="references">
+    <h2>References</h2>
+    <ul>
+        <li>Uptodate. <a href="https://www.uptodate.com/contents/treatment-of-gout-flares">Treatment of Gout Flares</a> Treatment algorithm for acute flares</li>
+        <li>Uptodate. <a href="https://www.uptodate.com/contents/clinical-manifestations-and-diagnosis-of-gout">Clinical manifestations and diagnosis of gout</a> Diagnosing gout</li>
+        <li>Uptodate. <a href="https://www.uptodate.com/contents/pharmacologic-urate-lowering-therapy-and-treatment-of-tophi-in-patients-with-gout">Pharmacologic urate-lowering therapy and treatment of tophi in patients with gout</a></li>
+    </ul>
+</div>
+
+<div id="disclaimer">
+    <p>This page was last updated on <span class="last_updated"></span></p>
+    <p><b>Disclaimer</b>: Information presented in the template should be re-checked and should not be used alone to guide patient care or substitute for clinical judgement.</p>
+    <p><b>Note</b>: Please copy text into the EMR prior to adding any HIPPA information. Though no information is being saved/transmitted on this site, typing private information into a web page is generally bad practice.</p>
+</div>
+
 </body>
 
 <script src="js/setup_resizables.js"></script>
 <script src="js/setup_boxes.js"></script>
+<script>
+    var textarea = document.getElementsByClassName("checkable")[0];
+    textarea.focus();
+</script>
 <script>
     last_updateds = document.getElementsByClassName("last_updated");
     for (var i = 0; i < last_updateds.length; i++) {

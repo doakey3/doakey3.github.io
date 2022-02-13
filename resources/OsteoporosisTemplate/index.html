@@ -7,9 +7,10 @@
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <meta name="author" content="doakey3"> 
     <meta name="description" content="A template for charting on Osteoporosis">
-    <meta name="keywords" content="osteoporosis, osteopenia, frax, dexa, score, fragility, fracture">
+    <meta name="keywords" content="osteoporosis, osteopenia, frax, dexa, score, fragility, fracture, template">
     
     <link rel="stylesheet" href="css/grow_wrap.css">
+    <link rel="stylesheet" href="css/style.css">
 
     <style>
         #alen_nnt {
@@ -25,7 +26,8 @@
 
 </head>
 
-<body style="margin: 0;">
+<body>
+<h1>Osteoporosis Template</h1>
 <div class="grow-wrap">
 <textarea class="checkable resizable" spellcheck="false" autocomplete="off">
 SCREENING GUIDELINES FOR OSTEOPOROSIS: (When to get a DEXA according to the USPSTF)
@@ -79,7 +81,9 @@ INDICATIONS TO RESTART ALENDRONATE WITHIN 5 YEARS OF DRUG HOLIDAY: (Recheck a DE
 (    ) Bone loss seen on DEXA at the spine AND the hip
 (    ) Bone loss at either spine or hip and a fasting C-terminal telopeptide of type I collagen &t; 600 pg/mL
 </textarea>
+</div>
 
+<div id="notes">
 <a style="margin-left: 0.5em;" href="https://www.sheffield.ac.uk/FRAX/tool.aspx">FRAX Risk Assessment Tool</a>
 <br>
 
@@ -107,14 +111,13 @@ INDICATIONS TO RESTART ALENDRONATE WITHIN 5 YEARS OF DRUG HOLIDAY: (Recheck a DE
 
 <img src="media/treatment_algorithm.gif">
 
-</div>
-
 <table>
     <th style="vertical-align: top">Fragility Fracture:</th>
     <td>A fracture which results from low energy trauma, such as a fall from height or less. Examples: hip fracture, spinal fracture, distal forearm fracture</td>
 </table>
+</div>
 
-<div class="references">
+<div id="references">
     <h2>References</h2>
     <ul>
         <li>AAFP. <a href="https://www.aafp.org/afp/2015/0815/p261.html">Diagnosis and Management of Osteoporosis</a></li>
@@ -122,14 +125,23 @@ INDICATIONS TO RESTART ALENDRONATE WITHIN 5 YEARS OF DRUG HOLIDAY: (Recheck a DE
         <li>Osteoporosis Foundation. <a href="https://www.osteoporosis.foundation/health-professionals/fragility-fractures">Fragility Fractures</a> A definition of "fragility fracture"</li>
         <li>USPSTF. <a href="https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/osteoporosis-screening">Osteoporosis to Prevent Fractures: Screening</a> This is where the USPSTF states that the average osteoporosis risk of a 65 year-old white lady is 8.4%.</li>
     </ul>
-<p>This page was last updated on <span class="last_updated"></span></p>
-<p>Disclaimer: Information presented in the template should be re-checked and should not be used alone to guide patient care or substitute for clinical judgement.</p>
 </div>
+
+<div id="disclaimer">
+    <p>This page was last updated on <span class="last_updated"></span></p>
+    <p><b>Disclaimer</b>: Information presented in the template should be re-checked and should not be used alone to guide patient care or substitute for clinical judgement.</p>
+    <p><b>Note</b>: Please copy text into the EMR prior to adding any HIPPA information. Though no information is being saved/transmitted on this site, typing private information into a web page is generally bad practice.</p>
+</div>
+
 
 </body>
 
 <script src="js/setup_resizables.js"></script>
 <script src="js/setup_boxes.js"></script>
+<script>
+    var textarea = document.getElementsByClassName("checkable")[0];
+    textarea.focus();
+</script>
 <script>
     last_updateds = document.getElementsByClassName("last_updated");
     for (var i = 0; i < last_updateds.length; i++) {

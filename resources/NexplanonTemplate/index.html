@@ -10,6 +10,7 @@
     <meta name="keywords" content="nexplanon, implanon, implant, birth, control, family, planning, gynecology, pregnancy, prevention, template">
     
     <link rel="stylesheet" href="css/grow_wrap.css">
+    <link rel="stylesheet" href="css/style.css">
     
     <style>
         .codes {
@@ -22,8 +23,8 @@
     </style>
 </head>
 
-<body style="margin: 0;">
-<h1>Insertion</h1>
+<body>
+<h1>Nexplanon Template (Insertion &amp; Removal)</h1>
 <div class="grow-wrap">
 <textarea class="checkable resizable" spellcheck="false" autocomplete="off">
 Reasonably Certain Patient Is Not Pregnant:
@@ -67,23 +68,9 @@ PATIENT INSTRUCTIONS:
 - avoid taking a bath or going swimming until the wound has completely healed, showering is OK
 - Return to the clinic or go to the ER if you develop fever, chills, worsening pain in the arm, or bleeding from the surgical site
 - use an alternative form of contraception (condoms/abstinence) for 7 days to give the implant time to start working
-</textarea>
-</div>
-<video width="480" height="360" controls>
-    <source src="media/nexplanon_insertion.mp4" type="video/mp4">
-</video>
-<br><br>
-<table class="codes">
-    <tr>
-        <td>Z30.017</td>
-        <td>Implantable subdermal contraceptive insertion done</td>
-        <td>11981 (insertion)</td>
-    </tr>
-</table>
-<br>
-<h1>Removal</h1>
-<div class="grow-wrap">
-<textarea class="checkable resizable" spellcheck="false" autocomplete="off">
+
+------------------------------------------------------------------------
+
 REMOVAL CONSENT:
 Risks were discussed with the patient including: 
 - mild bruising
@@ -103,24 +90,35 @@ PATIENT INSTRUCTIONS
 - Return to the clinic or go to the ER if you develop fever, chills, worsening pain in the arm, or bleeding from the surgical site
 </textarea>
 </div>
-<video width="480" height="360" controls>
-    <source src="media/nexplanon_removal.mp4" type="video/mp4">
-</video>
-<br><br>
-<table class="codes">
-    <tr>
-        <td>Z30.46</td>
-        <td>Surveillance of implantable subdermal contraceptive done</td>
-        <td>11982 (removal) or 11983 (removal + reinsertion</td>
-    </tr>
-</table>
 
-<p>This page was last updated on <span class="last_updated"></span></p>
-<p>Disclaimer: Information presented in the template should be re-checked and should not be used alone to guide patient care or substitute for clinical judgement.</p>
-</body>
+<div id="notes">
+    <figure>
+        <video width="480" height="360" controls>
+            <source src="media/nexplanon_insertion.mp4" type="video/mp4">
+        </video>
+        <figcaption>Nexplanon Insertion</figcaption>
+    </figure>
+
+    <figure>
+        <video width="480" height="360" controls>
+            <source src="media/nexplanon_removal.mp4" type="video/mp4">
+        </video>
+        <figcaption>Nexplanon Removal</figcaption>
+    </figure>
+</div>
+
+<div id="disclaimer">
+    <p>This page was last updated on <span class="last_updated"></span></p>
+    <p><b>Disclaimer</b>: Information presented in the template should be re-checked and should not be used alone to guide patient care or substitute for clinical judgement.</p>
+    <p><b>Note</b>: Please copy text into the EMR prior to adding any HIPPA information. Though no information is being saved/transmitted on this site, typing private information into a web page is generally bad practice.</p>
+</div>
 
 <script src="js/setup_resizables.js"></script>
 <script src="js/setup_boxes.js"></script>
+<script>
+    var textarea = document.getElementsByClassName("checkable")[0];
+    textarea.focus();
+</script>
 <script>
     last_updateds = document.getElementsByClassName("last_updated");
     for (var i = 0; i < last_updateds.length; i++) {

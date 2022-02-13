@@ -10,10 +10,12 @@
     <meta name="keywords" content="sports, preparticipation, physical, exam, template">
     
     <link rel="stylesheet" href="css/grow_wrap.css">
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
 
-<body style="margin: 0;">
+<body>
+<h1>Sports Medicine Template</h1>
 <div class="grow-wrap">
 <textarea class="checkable resizable" spellcheck="false" autocomplete="off">
 Exertional Symptoms: [ExertionalSxs]
@@ -54,8 +56,10 @@ Contraindications for Sports Participation:
 </textarea>
 </div>
 
-<p>Athletes with multiple previous concussions should receive further evaluation before participation</p>
-<a href="https://www.aafp.org/afp/2000/0501/p2696.html" target="_blank">List of MSK related screening tests</a>
+<div id="notes">
+    <p>Athletes with multiple previous concussions should receive further evaluation before participation</p>
+    <a href="https://www.aafp.org/afp/2000/0501/p2696.html" target="_blank">List of MSK related screening tests</a>
+</div>
 
 <div class="references">
     <h2>References</h2>
@@ -65,14 +69,22 @@ Contraindications for Sports Participation:
         <li>Mayoclinic. <a href="https://www.mayoclinic.org/diseases-conditions/post-concussion-syndrome/symptoms-causes/syc-20353352" target="_blank">Persistent post-concussive symptoms</a>. I got the list of post-concussive syndrome symptoms from here</li>
         
     </ul>
-<p>This page was last updated on <span class="last_updated"></span></p>
-<p>Disclaimer: Information presented in the template should be re-checked and should not be used alone to guide patient care or substitute for clinical judgement.</p>
+</div>
+
+<div id="disclaimer">
+    <p>This page was last updated on <span class="last_updated"></span></p>
+    <p><b>Disclaimer</b>: Information presented in the template should be re-checked and should not be used alone to guide patient care or substitute for clinical judgement.</p>
+    <p><b>Note</b>: Please copy text into the EMR prior to adding any HIPPA information. Though no information is being saved/transmitted on this site, typing private information into a web page is generally bad practice.</p>
 </div>
 
 </body>
 
 <script src="js/setup_resizables.js"></script>
 <script src="js/setup_boxes.js"></script>
+<script>
+    var textarea = document.getElementsByClassName("checkable")[0];
+    textarea.focus();
+</script>
 <script>
     last_updateds = document.getElementsByClassName("last_updated");
     for (var i = 0; i < last_updateds.length; i++) {

@@ -10,6 +10,7 @@
     <meta name="keywords" content="mirena, iud, contraception, intrauterine, device, birth, control, family, planning, gynecology, template">
     
     <link rel="stylesheet" href="css/grow_wrap.css">
+    <link rel="stylesheet" href="css/style.css">
     
     <style>
         .codes {
@@ -22,8 +23,8 @@
     </style>
 </head>
 
-<body style="margin: 0;">
-<h1>Insertion</h1>
+<body>
+<h1>Mirena Template (Insertion &amp; Removal)</h1>
 <div class="grow-wrap">
 <textarea class="checkable resizable" spellcheck="false" autocomplete="off">
 Reasonably Certain Patient Is Not Pregnant:
@@ -73,28 +74,9 @@ PATIENT INSTRUCTIONS
 - new onset severe migraine headaches
 - severe vaginal bleeding
 - fever and feeling ill
-</textarea>
-</div>
-<video width="640" height="360" controls>
-    <source src="media/mirena_placement.mp4" type="video/mp4">
-</video>
-<br>
-<table class="codes">
-    <tr>
-        <th>ICD10</th>
-        <th>Title</th>
-        <th>CPT Codes-modifiers</th>
-    </tr>
-    <tr>
-        <td>Z30.430</td>
-        <td>Insertion of intrauterine contraceptive device done</td>
-        <td>58300</td>
-    </tr>
-</table>
-<br><br>
-<h1>Removal</h1>
-<div class="grow-wrap">
-<textarea class="checkable resizable" spellcheck="false" autocomplete="off">
+
+------------------------------------------------------------------------
+
 REMOVAL PROCEDURE
 A timeout was completed before the start of the procedure. The speculum was inserted and the cervix was identified. The IUD strings were identified and grasped with a Kelly clamp and the IUD was removed. The patient tolerated the procedure well. No complications.
 
@@ -102,31 +84,26 @@ EBL: &lt; 5 mL
 Chaperone: [CHAPERONE]
 </textarea>
 </div>
-<br><br>
-<table class="codes">
-    <tr>
-        <th>ICD10</th>
-        <th>Title</th>
-        <th>CPT Codes-modifiers</th>
-    </tr>
-    <tr>
-        <td>Z30.432</td>
-        <td>Removal of intrauterine contraceptive device done</td>
-        <td>58301</td>
-    </tr>
-    <tr>
-        <td>T83.39XA</td>
-        <td>Unsuccessful intrauterine contraceptive device removal</td>
-        <td>58301-52</td>
-    </tr>
-</table>
 
-<p>This page was last updated on <span class="last_updated"></span></p>
-<p>Disclaimer: Information presented in the template should be re-checked and should not be used alone to guide patient care or substitute for clinical judgement.</p>
-</body>
+<div id="notes">
+    <video width="640" height="360" controls>
+        <source src="media/mirena_placement.mp4" type="video/mp4">
+    </video>
+</div>
+
+<div id="disclaimer">
+    <p>This page was last updated on <span class="last_updated"></span></p>
+    <p><b>Disclaimer</b>: Information presented in the template should be re-checked and should not be used alone to guide patient care or substitute for clinical judgement.</p>
+    <p><b>Note</b>: Please copy text into the EMR prior to adding any HIPPA information. Though no information is being saved/transmitted on this site, typing private information into a web page is generally bad practice.</p>
+</div>
 
 <script src="js/setup_resizables.js"></script>
 <script src="js/setup_boxes.js"></script>
+
+<script>
+    var textarea = document.getElementsByClassName("checkable")[0];
+    textarea.focus();
+</script>
 <script>
     last_updateds = document.getElementsByClassName("last_updated");
     for (var i = 0; i < last_updateds.length; i++) {
@@ -135,4 +112,5 @@ Chaperone: [CHAPERONE]
         last_updateds[i].innerHTML = newdate;
     } 
 </script>
+
 </html>

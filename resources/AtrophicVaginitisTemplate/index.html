@@ -10,10 +10,12 @@
     <meta name="keywords" content="atrophic, vaginitis, atrophy, vagina, vaginal, menopause, postmenopausal, itching, pruritis, template">
     
     <link rel="stylesheet" href="css/grow_wrap.css">
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
 
-<body style="margin: 0;">
+<body>
+<h1>Atrophic Vaginitis Template</h1>
 <div class="grow-wrap">
 <textarea class="checkable resizable" spellcheck="false" autocomplete="off">
 Atrophic Vaginitis Symptoms:
@@ -67,27 +69,38 @@ Treatment OPTION 1
 </textarea>
 </div>
 
-<p>Differential diagnosis</p>
-<ul>
-    <li>Candidiasis</li>
-    <li>Bacterial vaginosis</li>
-    <li>Trichomoniasis</li>
-    <li>Contact irritation</li>
-</ul>
-<div class="references">
+<div id="notes">
+    <p>Differential diagnosis</p>
+    <ul>
+        <li>Candidiasis</li>
+        <li>Bacterial vaginosis</li>
+        <li>Trichomoniasis</li>
+        <li>Contact irritation</li>
+    </ul>
+</div>
+
+<div id="references">
     <h2>References</h2>
     <ul>
         <li>AAFP <a href="https://www.aafp.org/afp/2000/0515/p3090.html">Diagnosis and Treatment of Atrophic Vaginitis</a>. Most of the information in the template came from this site.</li>
         <li>Uptodate <a href="https://www.uptodate.com/contents/genitourinary-syndrome-of-menopause-vulvovaginal-atrophy-treatment">Genitourinary syndrome of menopause (vulvovaginal atrophy): Treatment</a>. I used this site to develop a treatment plan. I prefer vagifem because of reported patient preference (Easier to insert a tablet than to use a messy vaginal cream. Using a vaginal moisturizer and a cream was even more messy per patient.)</li>
     </ul>
-
-<p>This page was last updated on <span class="last_updated"></span></p>
-<p>Disclaimer: Information presented in the template should be re-checked and should not be used alone to guide patient care or substitute for clinical judgement.</p>
 </div>
+
+<div id="disclaimer">
+    <p>This page was last updated on <span class="last_updated"></span></p>
+    <p><b>Disclaimer</b>: Information presented in the template should be re-checked and should not be used alone to guide patient care or substitute for clinical judgement.</p>
+    <p><b>Note</b>: Please copy text into the EMR prior to adding any HIPPA information. Though no information is being saved/transmitted on this site, typing private information into a web page is generally bad practice.</p>
+</div>
+
 </body>
 
 <script src="js/setup_resizables.js"></script>
 <script src="js/setup_boxes.js"></script>
+<script>
+    var textarea = document.getElementsByClassName("checkable")[0];
+    textarea.focus();
+</script>
 <script>
     last_updateds = document.getElementsByClassName("last_updated");
     for (var i = 0; i < last_updateds.length; i++) {

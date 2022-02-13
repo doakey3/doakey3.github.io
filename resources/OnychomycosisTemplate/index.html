@@ -10,15 +10,17 @@
     <meta name="keywords" content="toenail, onychomycosis, fingernail, yellow, brittle, fungal, fungi, template">
     
     <link rel="stylesheet" href="css/grow_wrap.css">
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
 
-<body style="margin: 0;">
+<body>
+<h1>Onychomycosis Template</h1>
 <div class="grow-wrap">
 <textarea class="checkable resizable" spellcheck="false" autocomplete="off">
 Onychomycosis Treatment Indicators: (more indicators supports use of oral/systemic therapy)
 (    ) Diabetes mellitus
-(    ) History of cellulitis
+(    ) History of repeated cellulitis in the lower extremity
 (    ) Venous insufficiency
 (    ) Immunosuppressed patient
 (    ) Discomfort or pain related to the affected nail
@@ -37,12 +39,28 @@ Oncychomycosis Severity:
 - start ciclopirox 8% laquer solution, applied to affected nail daily after showering/bathing, every 7 days remove laquer with rubbing alcohol and file the surface of the nail down, continue use for up to 12 weeks
 </textarea>
 </div>
-<p>This page was last updated on <span class="last_updated"></span></p>
-<p>Disclaimer: Information presented in the template should be re-checked and should not be used alone to guide patient care or substitute for clinical judgement.</p>
+
+<div id="references">
+    <h2>References</h2>
+    <ul>
+        <li>Uptodate. <a href="https://www.uptodate.com/contents/onychomycosis-management">Onychomycosis: Management</a></li>
+    </ul>
+</div>
+
+<div id="disclaimer">
+    <p>This page was last updated on <span class="last_updated"></span></p>
+    <p><b>Disclaimer</b>: Information presented in the template should be re-checked and should not be used alone to guide patient care or substitute for clinical judgement.</p>
+    <p><b>Note</b>: Please copy text into the EMR prior to adding any HIPPA information. Though no information is being saved/transmitted on this site, typing private information into a web page is generally bad practice.</p>
+</div>
+
 </body>
 
 <script src="js/setup_resizables.js"></script>
 <script src="js/setup_boxes.js"></script>
+<script>
+    var textarea = document.getElementsByClassName("checkable")[0];
+    textarea.focus();
+</script>
 <script>
     last_updateds = document.getElementsByClassName("last_updated");
     for (var i = 0; i < last_updateds.length; i++) {

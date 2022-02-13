@@ -10,10 +10,12 @@
     <meta name="keywords" content="obesity, template, fat, overweight, bmi, weight, loss">
     
     <link rel="stylesheet" href="css/grow_wrap.css">
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
 
-<body style="margin: 0;">
+<body>
+<h1>Obesity Template</h1>
 <div class="grow-wrap">
 <textarea class="checkable resizable" spellcheck="false" autocomplete="off">
 Indications for Pharmacologic Therapy of Obesity:
@@ -168,15 +170,17 @@ OPTION 5: Semaglutide (Wegovy)
 </textarea>
 </div>
 
+<div id="notes">
 <p>To prescribe Qsymia, you'll need to get certified at <a href="https://www.qsymiarems.com/">https://www.qsymiarems.com/</a></p>
-<figure>
-<center>
-<img src="media/comparing_drugs.gif">
-<figcaption>Average weight loss % after 52 weeks</figcaption>
-</center>
+    <figure>
+    <center>
+        <img src="media/comparing_drugs.gif">
+        <figcaption>Average weight loss % after 52 weeks</figcaption>
+    </center>
 </figure>
+</div>
 
-<div class="references">
+<div id="references">
     <h2>References</h2>
     <ul>
         <li>AACE Phentermine Patient Information. <a href="https://pro.aace.com/files/obesity/toolkit/phentermine_patient_info.pdf">https://pro.aace.com/files/obesity/toolkit/phentermine_patient_info.pdf</a></li>
@@ -190,14 +194,22 @@ OPTION 5: Semaglutide (Wegovy)
         <li>Uptodate: "Obesity in adults: Behavioral therapy". <a href="https://www.uptodate.com/contents/obesity-in-adults-behavioral-therapy">https://www.uptodate.com/contents/obesity-in-adults-behavioral-therapy</a></li>
         <li>Note: The order of the options for pharmacologic therapy in this template were adapted to fit TRICARE's requirements. The prior authorization forms for each of the medications in this template can be found on the <a href="https://www.express-scripts.com/frontend/open-enrollment/tricare/fst#/formularyPricing/results">Tricare Express Scripts</a> website.
     </ul>
-<p>This page was last updated on <span class="last_updated"></span></p>
-<p>Disclaimer: Information presented in the template should be re-checked and should not be used alone to guide patient care or substitute for clinical judgement.</p>
+</div>
+
+<div id="disclaimer">
+    <p>This page was last updated on <span class="last_updated"></span></p>
+    <p><b>Disclaimer</b>: Information presented in the template should be re-checked and should not be used alone to guide patient care or substitute for clinical judgement.</p>
+    <p><b>Note</b>: Please copy text into the EMR prior to adding any HIPPA information. Though no information is being saved/transmitted on this site, typing private information into a web page is generally bad practice.</p>
 </div>
 
 </body>
 
 <script src="js/setup_resizables.js"></script>
 <script src="js/setup_boxes.js"></script>
+<script>
+    var textarea = document.getElementsByClassName("checkable")[0];
+    textarea.focus();
+</script>
 <script>
     last_updateds = document.getElementsByClassName("last_updated");
     for (var i = 0; i < last_updateds.length; i++) {

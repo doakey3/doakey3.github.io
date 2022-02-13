@@ -10,10 +10,12 @@
     <meta name="keywords" content="breast, lump, cancer, template">
     
     <link rel="stylesheet" href="css/grow_wrap.css">
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
 
-<body style="margin: 0;">
+<body>
+<h1>Breast Lump Template</h1>
 <div class="grow-wrap">
 <textarea class="checkable resizable" spellcheck="false" autocomplete="off">
 Breast Lump Key History:
@@ -48,24 +50,37 @@ Protective Factors: (Number indicates relative risk)
 (    ) Oophorectomy before age 35 (0.3)
 (    ) Aspirin more than once per week for the last 6 months or longer (0.79)</textarea>
 </div>
-<p>The best time to examine breasts is 7-9 days after onset of menses</p>
-<br>
-<img src="media/breastexam.jpg">
 
-<div class="references">
+<div id="notes">
+    <p>The best time to examine breasts is 7-9 days after onset of menses</p>
+    <br>
+    <img src="media/breastexam.jpg">
+</div>
+
+<div id="references">
     <h2>References</h2>
     <ul>
         <li>Uptodate. <a href="https://www.uptodate.com/contents/clinical-manifestations-differential-diagnosis-and-clinical-evaluation-of-a-palpable-breast-mass">Clinical manifestations, differential diagnosis, and clinical evaluation of a palpable breast mass</a></li>
         <li>Uptodate. <a href="https://www.uptodate.com/contents/diagnostic-evaluation-of-women-with-suspected-breast-cancer">Diagnostic evaluation of women with suspected breast cancer</a></li>
     </ul>
-<p>This page was last updated on <span class="last_updated"></span></p>
-<p>Disclaimer: Information presented in the template should be re-checked and should not be used alone to guide patient care or substitute for clinical judgement.</p>
+</div>
+
+<div id="disclaimer">
+    <p>This page was last updated on <span class="last_updated"></span></p>
+    <p><b>Disclaimer</b>: Information presented in the template should be re-checked and should not be used alone to guide patient care or substitute for clinical judgement.</p>
+    <p><b>Note</b>: Please copy text into the EMR prior to adding any HIPPA information. Though no information is being saved/transmitted on this site, typing private information into a web page is generally bad practice.</p>
 </div>
 
 </body>
 
 <script src="js/setup_resizables.js"></script>
 <script src="js/setup_boxes.js"></script>
+
+<script>
+    var textarea = document.getElementsByClassName("checkable")[0];
+    textarea.focus();
+</script>
+
 <script>
     last_updateds = document.getElementsByClassName("last_updated");
     for (var i = 0; i < last_updateds.length; i++) {

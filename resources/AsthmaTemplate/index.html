@@ -10,37 +10,14 @@
     <meta name="keywords" content="asthma, asthmatic, sob, cough, allergy, atopy, template">
     
     <link rel="stylesheet" href="css/grow_wrap.css">
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
 
-<body style="margin: 0;">
+<body>
+<h1>Asthma Template</h1>
 <div class="grow-wrap">
 <textarea class="checkable resizable" spellcheck="false" autocomplete="off">
-Asthma Control Test (Child, Age 4-11):
-How is your asthma today?
-(    ) Very bad
-(    ) Bad
-(    ) Good
-(    ) Very Good
-
-How much of a problem is your asthma when you run, exercise, or play sports?
-(    ) It is a big problem I cannot do what I want to do
-(    ) It is a problem and I do not like it
-(    ) It is a little problem but it is okay
-(    ) It is not a problem
-
-Do you cough because of your asthma?
-(    ) Yes, all of the time
-(    ) Yes, most of the time
-(    ) Yes, some of the time
-(    ) No, none of the time
-
-During the last 4 weeks, how many days did your child have any taytime asthma symptoms
-</textarea>
-</div>
-    
-<div class="grow-wrap">
-<textarea class="checkable resizable" spellcheck="false" autocomplete="off">   
 ASTHMA SEVERITY RATING (The symptom with the greatest severity sets the rating)
 Intermittent:
 (    ) Daytime asthma symptoms occurring &lt;= 2 days per week
@@ -88,35 +65,43 @@ GOALS OF THERAPY:
 - requiring SABA no more than 2 times weekly except for exercise pre-treatments
 - no interference with normal activities
 - maintenance of normal peak expiratory flow
-
-NOTE: every asthma patient should have a peak flow meter
 </textarea>
 </div>
-<br>
-<a href="peak_flow_tracker.pdf">Peak Flow Tracker PDF</a>
+<div id="notes">
+    <p>Note: every asthma patient should have a peak flow meter</p>
+    
+    <a href="peak_flow_tracker.pdf">Peak Flow Tracker PDF</a>
 
-<br>
-<img src="media/urgent_care_management.png">
-<br>
-<img src="media/asthma_treatments.png">
-<br>
-<img width="392px" src="media/how_to_inhaler.png">
-
-<div class="references">
+    <br>
+    <img src="media/urgent_care_management.png">
+    <br>
+    <img src="media/asthma_treatments.png">
+    <br>
+    <img width="392px" src="media/how_to_inhaler.png">
+</div>
+<div id="references">
     <h2>References</h2>
     <ul>
-        <li>Uptodate. <a href="https://www.uptodate.com/contents/an-overview-of-asthma-management">An Overview of Asthma Management.</li>
-        <li>Uptodate. <a href="https://www.uptodate.com/contents/treatment-of-intermittent-and-mild-persistent-asthma-in-adolescents-and-adults">Treatment of intermittent and mild persistent asthma in adolescents and adults. Gives some discussion about the downsides of treating mild persistent asthma with inhaled glucocorticoids, even though this treatment reduces the number of severe exacerbations.</li>
-        <li>Uptodate. <a href="https://www.uptodate.com/contents/acute-exacerbations-of-asthma-in-adults-emergency-department-and-inpatient-management">Treatment of exacerbations</li>
+        <li>Uptodate. <a href="https://www.uptodate.com/contents/an-overview-of-asthma-management">An Overview of Asthma Management.</a></li>
+        <li>Uptodate. <a href="https://www.uptodate.com/contents/treatment-of-intermittent-and-mild-persistent-asthma-in-adolescents-and-adults">Treatment of intermittent and mild persistent asthma in adolescents and adults. Gives some discussion about the downsides of treating mild persistent asthma with inhaled glucocorticoids, even though this treatment reduces the number of severe exacerbations.</a></li>
+        <li>Uptodate. <a href="https://www.uptodate.com/contents/acute-exacerbations-of-asthma-in-adults-emergency-department-and-inpatient-management">Acute Exacerbations of Asthma in Adults Emergency Department and Inpatient Management</a></li>
     </ul>
-<p>This page was last updated on <span class="last_updated"></span></p>
-<p>Disclaimer: Information presented in the template should be re-checked and should not be used alone to guide patient care or substitute for clinical judgement.</p>
+</div>
+
+<div id="disclaimer">
+    <p>This page was last updated on <span class="last_updated"></span></p>
+    <p><b>Disclaimer</b>: Information presented in the template should be re-checked and should not be used alone to guide patient care or substitute for clinical judgement.</p>
+    <p><b>Note</b>: Please copy text into the EMR prior to adding any HIPPA information. Though no information is being saved/transmitted on this site, typing private information into a web page is generally bad practice.</p>
 </div>
 
 </body>
 
 <script src="js/setup_resizables.js"></script>
 <script src="js/setup_boxes.js"></script>
+<script>
+    var textarea = document.getElementsByClassName("checkable")[0];
+    textarea.focus();
+</script>
 <script>
     last_updateds = document.getElementsByClassName("last_updated");
     for (var i = 0; i < last_updateds.length; i++) {

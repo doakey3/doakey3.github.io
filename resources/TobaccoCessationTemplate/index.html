@@ -10,10 +10,12 @@
     <meta name="keywords" content="tobacco, cessation, smoking, addiction, cigarette, cigar, chewing">
     
     <link rel="stylesheet" href="css/grow_wrap.css">
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
 
-<body style="margin: 0;">
+<body>
+<h1>Tobacco Cessation Template</h1>
 <div class="grow-wrap">
 <textarea class="checkable resizable" spellcheck="false" autocomplete="off">
 Tobacco Frequency: [FREQUENCY]
@@ -51,10 +53,10 @@ OPTION 2: Combination Nicotine Replacement
 - For best results, chew the gum until the nicotine flavor appears, then park the gum between jaw and cheek until the taste disappears, then chew again, repeat for 30 minutes. 
 - Avoid coffee and carbonated drinks before and during gum use.
 
-(<= 1 pack per day)
+(&lt;= 1 pack per day)
 - start nicotine patch daily for 12 weeks, 14 mg, apply patch to new location every day. If vivid dreams occur, remove patch at bedtime. Do not fold or cut patch. Do not leave patch on for more than 24 hours. Do not wear multiple patches at a time. Wash hands after applying new patch.
 
-(> 1 pack per day)
+(&gt; 1 pack per day)
 - start nicotine patch daily for 12 weeks, 21 mg, apply patch to new location every day. If vivid dreams occur, remove patch at bedtime. Do not fold or cut patch. Do not leave patch on for more than 24 hours. Do not wear multiple patches at a time. Wash hands after applying new patch.
 
 OPTION 3: Buproprion (avoid if at risk of seizures)
@@ -62,13 +64,32 @@ OPTION 3: Buproprion (avoid if at risk of seizures)
 </textarea>
 </div>
 
+<div id="notes">
 <p>Go to <a href="map.naquitline.org">map.naquitline.org</a> for more information about local quit resources</p>
-<p>This page was last updated on <span class="last_updated"></span></p>
-<p>Disclaimer: Information presented in the template should be re-checked and should not be used alone to guide patient care or substitute for clinical judgement.</p>
+</div>
+
+<div id="references">
+    <h2>References</h2>
+    <ul>
+        <li>Uptodate. <a href="https://www.uptodate.com/contents/overview-of-smoking-cessation-management-in-adults">Overview of smoking cessation management in adults</a></li>
+    </ul>
+</div>
+
+<div id="disclaimer">
+    <p>This page was last updated on <span class="last_updated"></span></p>
+    <p><b>Disclaimer</b>: Information presented in the template should be re-checked and should not be used alone to guide patient care or substitute for clinical judgement.</p>
+    <p><b>Note</b>: Please copy text into the EMR prior to adding any HIPPA information. Though no information is being saved/transmitted on this site, typing private information into a web page is generally bad practice.</p>
+</div>
+
 </body>
 
 <script src="js/setup_resizables.js"></script>
 <script src="js/setup_boxes.js"></script>
+
+<script>
+    var textarea = document.getElementsByClassName("checkable")[0];
+    textarea.focus();
+</script>
 <script>
     last_updateds = document.getElementsByClassName("last_updated");
     for (var i = 0; i < last_updateds.length; i++) {
@@ -77,4 +98,5 @@ OPTION 3: Buproprion (avoid if at risk of seizures)
         last_updateds[i].innerHTML = newdate;
     } 
 </script>
+
 </html>

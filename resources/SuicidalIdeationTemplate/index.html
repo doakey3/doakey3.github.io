@@ -10,10 +10,12 @@
     <meta name="keywords" content="suicidal, suicide, homocide, homocidal, self, harm, death, template">
     
     <link rel="stylesheet" href="css/grow_wrap.css">
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
 
-<body style="margin: 0;">
+<body>
+<h1>Suicidal Ideation Template</h1>
 <div class="grow-wrap">
 <textarea class="checkable resizable" spellcheck="false" autocomplete="off">
 CAGE Questionnaire:
@@ -105,23 +107,36 @@ Suicidal Thoughts:
 - If actively suicidal, call 911 or go directly to the nearest emergency department
 </textarea>
 </div>
-<img src="media/SI_plan.gif">
-<br>
-<img src="media/safety_plan.gif">
 
-<div class="references">
+<div id="notes">
+    <img src="media/SI_plan.gif">
+    <br>
+    <img src="media/safety_plan.gif">
+</div>
+
+<div id="references">
     <h2>References</h2>
     <ul>
         <li>Uptodate. <a href="https://www.uptodate.com/contents/suicidal-ideation-and-behavior-in-adults">Suicidal ideation and behavior in adults</a></li>
         <li>Uptodate. <a href="https://www.uptodate.com/contents/effect-of-antidepressants-on-suicide-risk-in-adults">Effect of antidepressants on suicide risk in adults</a></li>
     </ul>
-<p>This page was last updated on <span class="last_updated"></span></p>
-<p>Disclaimer: Information presented in the template should be re-checked and should not be used alone to guide patient care or substitute for clinical judgement.</p>
 </div>
+
+<div id="disclaimer">
+    <p>This page was last updated on <span class="last_updated"></span></p>
+    <p><b>Disclaimer</b>: Information presented in the template should be re-checked and should not be used alone to guide patient care or substitute for clinical judgement.</p>
+    <p><b>Note</b>: Please copy text into the EMR prior to adding any HIPPA information. Though no information is being saved/transmitted on this site, typing private information into a web page is generally bad practice.</p>
+</div>
+
 </body>
 
 <script src="js/setup_resizables.js"></script>
 <script src="js/setup_boxes.js"></script>
+
+<script>
+    var textarea = document.getElementsByClassName("checkable")[0];
+    textarea.focus();
+</script>
 <script>
     last_updateds = document.getElementsByClassName("last_updated");
     for (var i = 0; i < last_updateds.length; i++) {
@@ -130,4 +145,5 @@ Suicidal Thoughts:
         last_updateds[i].innerHTML = newdate;
     } 
 </script>
+
 </html>
