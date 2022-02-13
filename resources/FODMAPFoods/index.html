@@ -10,14 +10,13 @@
     
     <style>
         body {
+            display: flex;
+            flex-direction: column;
             margin: 0;
-            max-width: 8.5in;
+            width: calc(8.5in - 2px);
+            height: calc(11in - 2px);
             padding: 0.25in;
             border: 1px dashed black;
-            box-sizing: border-box;
-            position: absolute;
-            top: 0;
-            bottom: 0;
         }
         h1 {
             text-align: center;
@@ -41,11 +40,28 @@
             text-decoration: underline;
             text-decoration-color:red
         }
+        #references {
+            font-size: 75%;
+            width: 8in;
+        }
+        #references ul {
+            margin: 0;
+            margin-left: -2em;
+        }
+        h2 {
+            font-size: 100%;
+            margin-bottom: 0;
+        }
+        hr.expander {
+            flex-grow: 1; 
+            border: 0;
+        }
         @media print {
             body {
-                position: relative;
                 border: none;
                 padding: 0;
+                max-width: 8in;
+                max-height: 10.5in;
             }
         }
     </style>
@@ -103,6 +119,12 @@
     <li>Strictly avoid FODMAP foods x 6 weeks</li>
     <li>Slowly reintroduce FODMAP foods to determine tolerance of each.</li>
 </ol>
-<p style="font-size: 75%; position: fixed; bottom: 0;">Reference: "Short-chain carbohydrates and functional gastrointestinal disorders". Am J Gastroenterol 2013; 108:707</p>
+<hr class="expander">
+<div id="references">
+<h2>References</h2>
+<ul>
+    <li>"Short-chain carbohydrates and functional gastrointestinal disorders". Am J Gastroenterol 2013; 108:707</li>
+</ul>
+</div>
 </body>
 </html>

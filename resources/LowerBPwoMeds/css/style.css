@@ -1,11 +1,11 @@
 body {
     margin: 0;
-    max-width: 8.5in;
+    width: calc(8.5in - 2px);
+    display: flex;
+    flex-direction: column;
     padding: 0.25in;
     border: 1px dashed black;
-    box-sizing: border-box;
-    height: 10.5in;
-    position: relative;
+    height: calc(11in - 2px);
 }
 h1 {
     margin: 0;
@@ -13,11 +13,14 @@ h1 {
     margin-bottom: 0.5em;
 }
 
+hr.expander {
+    flex-grow: 1; 
+    border: 0;
+}
+
 #references {
     font-size: 75%;
     width: 8in;
-    position: absolute;
-    bottom: 0.25in;
 }
 #references ul {
     margin: 0;
@@ -59,8 +62,7 @@ table {
         position: relative;
         border: none;
         padding: 0;
-    }
-    #references {
-        bottom: 0;
+        max-width: 8in;
+        max-height: 10.5in;
     }
 }

@@ -13,12 +13,13 @@
     
     <style>
         .special_test {
+            vertical-align: top;
             border: 2px solid black;
             display: inline-block;
-            float: left;
             margin: 5px;
             padding: 10px;
             width: min-content;
+            height: 400px;
         }
         .special_test h3 {
             margin-top: 0;
@@ -29,9 +30,6 @@
             margin-bottom: 0;
             font-family: tahoma;
             font-size: 10pt;
-        }
-        br.pagebreak {
-            page-break-after: always;
         }
         @media screen {
             .noPrint{}
@@ -172,81 +170,88 @@ Followup in clinic in 1 week for next injection</textarea>
 <img src="media/knee_brace.jpg">
 <img src="media/dx_by_loc.jpg">
 <br>
-<div class="special_test">
-    <h3>Anterior Drawer</h3>
-    <video class="noPrint" width="190" height="162" autoplay muted loop>
-        <source src="media/anterior_drawer.mp4" type="video/mp4">
-    </video>
-    <img class="noScreen" src="media/anterior_drawer.jpg">
-    <p>Patient hips flexed 45 degrees. Examiner sits on patients foot, tugs on upper tibia.</p>
-    <p>Positive if lack of stable end point or excessive anterior translation compared to contralateral side.</p>
-    <p>Positive test indicates ACL injury</p>
-</div>
+<div id="special_tests">
+    <div class="special_test">
+        <h3>Anterior Drawer</h3>
+        <video class="noPrint" width="190" height="162" autoplay muted loop>
+            <source src="media/anterior_drawer.mp4" type="video/mp4">
+        </video>
+        <img class="noScreen" src="media/anterior_drawer.jpg">
+        <p>Patient hips flexed 45 degrees. Examiner sits on patients foot, tugs on upper tibia.</p>
+        <p>Positive if lack of stable end point or excessive anterior translation compared to contralateral side.</p>
+        <p>Positive test indicates ACL injury</p>
+    </div>
 
-<div class="special_test">
-    <h3>Posterior Drawer</h3>
-    <video class="noPrint" width="190" height="162" autoplay muted loop>
-        <source src="media/posterior_drawer.mp4" type="video/mp4">
-    </video>
-    <img class="noScreen" src="media/posterior_drawer.jpg">
-    <p>Patient hips flexed 45 degrees. Examiner sits on patients foot, pushes on upper tibia.</p>
-    <p>Positive if lack of stable end point or excessive posterior translation compared to contralateral side.</p>
-    <p>Positive test indicates PCL injury</p>
-</div>
+    <div class="special_test">
+        <h3>Posterior Drawer</h3>
+        <video class="noPrint" width="190" height="162" autoplay muted loop>
+            <source src="media/posterior_drawer.mp4" type="video/mp4">
+        </video>
+        <img class="noScreen" src="media/posterior_drawer.jpg">
+        <p>Patient hips flexed 45 degrees. Examiner sits on patients foot, pushes on upper tibia.</p>
+        <p>Positive if lack of stable end point or excessive posterior translation compared to contralateral side.</p>
+        <p>Positive test indicates PCL injury</p>
+    </div>
 
-<div class="special_test">
-    <h3>Lachman's</h3>
-    <video class="noPrint" width="190" height="162" autoplay muted loop>
-        <source src="media/lachman.mp4" type="video/mp4">
-    </video>
-    <img class="noScreen" src="media/lachman.jpg">
-</div>
+    <div class="special_test">
+        <h3>Lachman's</h3>
+        <video class="noPrint" width="190" height="162" autoplay muted loop>
+            <source src="media/lachman.mp4" type="video/mp4">
+        </video>
+        <img class="noScreen" src="media/lachman.jpg">
+        <p>Assesses for ACL tear. With knee relaxed at 30 degrees flexion and hip slightly externally rotated, stabilize the distal femur and move the tibia anteriorly and posteriorly. Compare end points with the opposite leg.</p>
+    </div>
 
-<div class="special_test">
-    <h3>Nobles's</h3>
-    <video class="noPrint" width="190" height="162" autoplay muted loop>
-        <source src="media/nobles.mp4" type="video/mp4">
-    </video>
-    <img class="noScreen" src="media/nobles.jpg">
-</div>
+    <div class="special_test">
+        <h3>Nobles's</h3>
+        <video class="noPrint" width="190" height="162" autoplay muted loop>
+            <source src="media/nobles.mp4" type="video/mp4">
+        </video>
+        <img class="noScreen" src="media/nobles.jpg">
+        <p>Tests for IT band friction syndrome. Positive if there is pain over the lateral femoral condyle at 30 degrees flexion.</p>
+    </div>
 
-<div class="special_test">
-    <h3>Patellar Apprehension</h3>
-    <video class="noPrint" width="190" height="162" autoplay muted loop>
-        <source src="media/patellar_apprehension.mp4" type="video/mp4">
-    </video>
-    <img class="noScreen" src="media/patellar_apprehension.jpg">
-</div>
+    <div class="special_test">
+        <h3>Patellar Apprehension</h3>
+        <video class="noPrint" width="190" height="162" autoplay muted loop>
+            <source src="media/patellar_apprehension.mp4" type="video/mp4">
+        </video>
+        <img class="noScreen" src="media/patellar_apprehension.jpg">
+        <p>Assess for tendency of patellar dislocation. Patellar dislocation usually occurs in the lateral direction. The test is positive if the patient tries to stop you.</p>
+    </div>
 
-<div class="special_test">
-    <h3>Thessaly's Test</h3>
-    <video class="noPrint" width="190" height="162" autoplay muted loop>
-        <source src="media/thessaly.mp4" type="video/mp4">
-    </video>
-    <img class="noScreen" src="media/thessaly.jpg">
-    <p>Patient stands on slightly flexed leg and rotates femur on tibia.</p>
-    <p>Positive if medial or lateral joint line discomfort or a sense of locking/ catching in the knee.</p>
-    <p>Positive test indicates injury to meniscus.</p>
-</div>
+    <div class="special_test">
+        <h3>Thessaly's Test</h3>
+        <video class="noPrint" width="190" height="162" autoplay muted loop>
+            <source src="media/thessaly.mp4" type="video/mp4">
+        </video>
+        <img class="noScreen" src="media/thessaly.jpg">
+        <p>Patient stands on slightly flexed leg and rotates femur on tibia.</p>
+        <p>Positive if medial or lateral joint line discomfort or a sense of locking/ catching in the knee.</p>
+        <p>Positive test indicates injury to meniscus.</p>
+    </div>
 
-<div class="special_test">
-    <h3>Varus Stress</h3>
-    <video class="noPrint" width="190" height="162" autoplay muted loop>
-        <source src="media/varus_stress.mp4" type="video/mp4">
-    </video>
-    <img class="noScreen" src="media/varus_stress.jpg">
-    <p>Physician pulls medially on lower leg while pushing laterally on inner thigh.</p>
-    <p>Positive if pain along the lateral collateral ligament.</p>
-    <p>Positive test indicates lateral collateral ligament injury.</p>
-</div>
+    <div class="special_test">
+        <h3>Varus Stress</h3>
+        <video class="noPrint" width="190" height="162" autoplay muted loop>
+            <source src="media/varus_stress.mp4" type="video/mp4">
+        </video>
+        <img class="noScreen" src="media/varus_stress.jpg">
+        <p>Physician pulls medially on lower leg while pushing laterally on inner thigh.</p>
+        <p>Positive if pain along the lateral collateral ligament.</p>
+        <p>Positive test indicates lateral collateral ligament injury.</p>
+    </div>
 
-<div class="special_test">
-    <h3>Valgus Stress</h3>
-    <video class="noPrint" width="190" height="162" autoplay muted loop>
-        <source src="media/valgus_stress.mp4" type="video/mp4">
-    </video>
-    <img class="noScreen" src="media/valgus_stress.jpg">
+    <div class="special_test">
+        <h3>Valgus Stress</h3>
+        <video class="noPrint" width="190" height="162" autoplay muted loop>
+            <source src="media/valgus_stress.mp4" type="video/mp4">
+        </video>
+        <img class="noScreen" src="media/valgus_stress.jpg">
+        <p>Assesses for medial collateral ligament tear.</p>
+    </div>
 </div>
+<br>
 <p>This page was last updated on <span class="last_updated"></span></p>
 <p>Disclaimer: Information presented in the template should be re-checked and should not be used alone to guide patient care or substitute for clinical judgement.</p>
 </body>
