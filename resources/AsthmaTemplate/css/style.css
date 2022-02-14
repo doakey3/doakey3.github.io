@@ -48,3 +48,7 @@ hr {
 .grow-wrap + div {
     border-top: none;
 }
+
+img {
+    max-width: 100%;
+}

@@ -139,6 +139,11 @@ var links = {
         "keywords": "emra, splinting, guide, ortho, orthopedic, instructions",
         "url": "https://www.emra.org/globalassets/emra/publications/reference-cards/emra_sportsmedicine_splint_guide.pdf"
     },
+    "Epilepsy Foundation Driving Laws": {
+        "description": "State driving laws for those with epilepsy.",
+        "keywords": "license, driving, seizures, epilepsy, laws",
+        "url": "https://www.epilepsy.com/driving-laws"
+    },
     "FRAX Risk Calculator": {
         "description": "A calculator for evaluating a patient's risk of fractures related to osteoporosis.",
         "keywords": "frax, fracture, fragility, frailty, osteoporosis, osteopenia",
