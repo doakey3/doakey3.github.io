@@ -1,6 +1,5 @@
 body {
     margin: 0;
-    background-color: #595959;
 }
 
 .scroll_searchbar {
@@ -89,10 +88,19 @@ li.pdf {background-image: url("../icons/pdf.svg")}
 li.txt {background-image: url("../icons/txt.svg")}
 li.link {background-image: url("../icons/link.svg")}
 
+#science_block {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 32px;
+    background-color: #595959;
+    border: 3px solid #333333;
+}
+
 a#github_link {
     position: absolute;
-    top: 3px;
-    right: 3px;
+    right: 0;
     width: 32px;
     height: 32px;
     background-position: center;
@@ -106,11 +114,8 @@ a#github_link:active {filter: invert(37%) sepia(0%) saturate(0%) hue-rotate(147d
 
 a#questions_concerns {
     color: white;
-    position: absolute;
-    top: 3px;
-    right: 38px;
     line-height: 32px;
-    height: 32px;
+    margin-left: 0.75em;
     cursor: default;
     user-select: none;
 }
