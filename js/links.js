@@ -164,6 +164,16 @@ var links = {
         "keywords": "msd, medical, standards, directory, med, board",
         "url": "https://afspecialwarfare.com/files/MSD%2027%20Feb%202020%20FINALV1.pdf",
     },
+    "MERCK Manual, Pediatric Blood Pressure Calculator, Boys": {
+        "description": "For calculating if a boy's blood pressure is outside of normal.",
+        "keywords": "pediatric, blood, pressure, bp, peds, boys, males",
+        "url": "https://www.merckmanuals.com/medical-calculators/BloodPressurePercentBoys.htm"
+    },
+    "MERCK Manual, Pediatric Blood Pressure Calculator, Girls": {
+        "description": "For calculating if a boy's blood pressure is outside of normal.",
+        "keywords": "pediatric, blood, pressure, bp, peds, girls, females",
+        "url": "https://www.merckmanuals.com/medical-calculators/BloodPressurePercentGirls.htm"
+    },
     "MHS Genesis": {
         "description": "Use this website to access MHS Genesis from a personal computer.",
         "keywords": "cerner, link",
