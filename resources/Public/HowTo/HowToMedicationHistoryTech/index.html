@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="MobileOptimized" content="320"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width, user-scalable=yes"/>
+    <meta charset="utf-8">
+    <title>How to do a Medication History</title>
+    <meta name="author" content="doakey3">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <meta name="description" content="A guide on completing the medication history in Cerner.">
+    <meta name="keywords" content="how, to, medication, history">
+    <style>
+        img {
+            max-width: 100%;
+            margin-bottom: 10px;
+        }
+        figure {
+            display: inline-block;
+            border: 3px solid lightgray;
+            margin: 0;
+            padding: 10px;
+            max-width: calc(100% - 20px);
+            margin-bottom: 20px;
+        }
+        figcaption {
+            color: black;
+        }
+        a {
+            display: block;
+            text-decoration: none;
+            margin-bottom: 10px;
+            color: blue;
+        }
+        @media print {
+            figure {page-break-inside: avoid;}
+        }
+    </style>
+</head>
+
+<body>
+    <h1>How to do a Medication History</h1>
+    <p>Every home medication should have a dose, route, and frequency. Compliance to home medications should also be documented.</p>
+    <h1 style="font-size: 150%">Table of Contents</h1>
+    <div id="toc"></div>
+    <h2>Navigating to the Medication History</h2>
+    <figure>
+        <img src="media/image1.png">
+        <figcaption>Navigate to the "Form Browser."</figcaption>
+    </figure>
+    <br>
+    <figure>
+        <img src="media/image2.png">
+        <figcaption>Right click on the "Adult Patient History" form.</figcaption>
+    </figure>
+    <br>
+    <figure>
+        <img src="media/image3.png">
+        <figcaption>Select "Modify."</figcaption>
+    </figure>
+    <br>
+    <figure>
+        <img src="media/image4.png">
+        <figcaption>Select "Medication History"</figcaption>
+    </figure>
+    <br>
+    <figure>
+        <img src="media/image5.png">
+        <figcaption>Click "Document Medication by Hx"</figcaption>
+    </figure>
+    <br>
+    <h2>Adding New Medications</h2>
+    <figure>
+        <img src="media/image6.png">
+        <figcaption>Click "Add"</figcaption>
+    </figure>
+    <br>
+    <figure>
+        <img src="media/image7.png">
+        <figcaption>Enter the name of the medication into the searchbar and click the appropriate medication from the available options.<br><br>Add as many other medications as needed before clicking "Done."</figcaption>
+    </figure>
+    <br>
+    <figure>
+        <img src="media/image8.png">
+        <figcaption>For each new medication, update the "Dose", "Route of Administration", and "Frequency."<br><br>Select the "Compliance" tab.</figcaption>
+    </figure>
+    <br>
+    <figure>
+        <img src="media/image9.png">
+        <figcaption>Edit the "Status", "Information Source", and "Last dose date/time" boxes.<br><br>When the details and compliance for each medication have been edited, click "Document History."</figcaption>
+    </figure>
+    <h2>Edit An Existing Historical Medication</h2>
+    <figure>
+        <img src="media/click_existing.png">
+        <figcaption>Right click on an existing medication.</figcaption>
+    </figure>
+    <br>
+    <figure>
+        <img src="media/modify.png">
+        <figcaption>Select "Modify"</figcaption>
+    </figure>
+    <br>
+    <figure>
+        <img src="media/setting_dose.png">
+        <figcaption>Set the dose, route, frequency. Then select "Compliance"</figcaption>
+    </figure>
+    <br>
+    <figure>
+        <img src="media/compliance.png">
+        <figcaption>Set the Status, Information source, and the Last dose date/time. Then click "Document History"</figcaption>
+    </figure>
+    <h2>Edit Compliance for a Prescribed Medication</h2>
+    <figure>
+        <img src="media/right_click_simvastatin.png">
+        <figcaption>Right click the prescribed medication.</figcaption>
+    </figure>
+    <br>
+    <figure>
+        <img src="media/modify_simvastatin.png">
+        <figcaption>Click "Modify"</figcaption>
+    </figure>
+    <br>
+    <figure>
+        <img src="media/select_simvastatin_compliance.png">
+        <figcaption>Select "Compliance"</figcaption>
+    </figure>
+    <br>
+    <figure>
+        <img src="media/edit_simvastatin_compliance.png">
+        <figcaption>Edit the status, information source, last dose date/time, then sign.</figcaption>
+    </figure>
+</body>
+
+<script>
+    var set_figcaption_widths = function() {
+        var figcaptions = document.getElementsByTagName("figcaption");
+        for (var i = 0; i < figcaptions.length; i++) {
+            var imgs = figcaptions[i].parentElement.getElementsByTagName("img");
+            if (imgs.length == 0) {
+                console.log(figcaptions[i].textContent);
+            }
+            var img = imgs[0];
+            var width = img.getBoundingClientRect().width;
+            if (width == 0) {
+                setTimeout(set_figcaption_widths, 50);
+            }
+            else {
+                figcaptions[i].style.maxWidth = width + "px";
+            }
+        }
+    }
+    setTimeout(set_figcaption_widths, 50);
+    
+    var generate_toc = function() {
+        var toc = document.getElementById("toc");
+        var h2s = document.getElementsByTagName("h2");
+        for (var i = 0; i < h2s.length; i++) {
+            var text = h2s[i].textContent;
+            id = text.toLowerCase().replace(/ /g, "_");
+            h2s[i].innerHTML = '<a name=' + id + '></a>' + text;
+            var toclink = document.createElement("a");
+            toclink.href = "#" + id;
+            toclink.innerHTML = text;
+            toc.appendChild(toclink);
+        }
+    }
+    generate_toc();
+</script>
+</html>

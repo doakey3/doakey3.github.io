@@ -3,35 +3,35 @@ body {
     background-color: #333333;
 }
 
-.scroll_searchbar {
+#searchbar {
     font-family: tahoma;
     background-position: 5px;
     background-repeat: no-repeat;
     height: 38px;
-    width: calc(100% - 250px);
+    width: 100%;
     font-size: 16px;
     line-height: 32px;
     border: 3px solid #333333;
     padding-left: 28px;
-    background-color: #216a7a;
+    background-color: white;
 }
 
-.scroll_searchbar:focus {
+#searchbar:focus {
     outline: none;
 }
 
-.scroll_searchbar {background-image: url("../icons/search.svg")}
+#searchbar {background-image: url("../icons/search.svg")}
 
 ::placeholder {
-  color: black;
-  opacity: 1;
+    color: black;
+    opacity: 1;
 }
 
 :-ms-input-placeholder {
-  color: black;
+    color: black;
 }
 
-.y-scrollable {
+#scroll_list_container {
     cursor: auto;
     position: absolute;
     top: 38px;
@@ -42,14 +42,14 @@ body {
     overflow-y: scroll;
 }
 
-.scroll_list {
+#scroll_list {
     list-style-type: none;
     padding: 0;
     margin: 0;
     overflow-x: hidden;
 }
 
-.scroll_list li {
+#scroll_list li {
     position: relative;
     height: 38px;
     background-color: #333333;
@@ -58,18 +58,18 @@ body {
     background-size: 20px;
 }
 
-.scroll_list li:nth-child(2n) {
+#scroll_list li:nth-child(2n) {
     background-color: #3e3e3e;
 }
 
-.scroll_list li.selected {
+#scroll_list li.selected {
     background-color: #855700;
 }
 
-.scroll_list li a.filelink {
+#scroll_list li a.filelink {
     font-family: tahoma;
     border: 3px solid transparent;
-    line-height: 28px;
+    line-height: 32px;
     padding-left: 33px;
     padding-right: 5px;
     text-decoration: none;
@@ -81,58 +81,20 @@ body {
     white-space: nowrap;
 }
 
-.scroll_list li a.filelink:hover {
+#scroll_list li a.filelink:hover {
     border: 3px solid #855700;
 }
 
-li.pdf {background-image: url("../icons/pdf.svg")}
-li.txt {background-image: url("../icons/txt.svg")}
+li {background-image: url("../icons/unknown.svg")}
+li.csv {background-image: url("../icons/csv.svg")}
+li.xls {background-image: url("../icons/csv.svg")}
+li.xlsx {background-image: url("../icons/csv.svg")}
+li.doc {background-image: url("../icons/doc.svg")}
+li.docx {background-image: url("../icons/doc.svg")}
+li.folder {background-image: url("../icons/folder.svg")}
+li.html {background-image: url("../icons/html.svg")}
 li.link {background-image: url("../icons/link.svg")}
-
-#science_block {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 250px;
-    height: 32px;
-    background-color: #595959;
-    border: 3px solid #333333;
-}
-
-a#github_link {
-    position: absolute;
-    right: 0;
-    width: 32px;
-    height: 32px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 32px;
-}
-
-a#github_link {background-image: url("../icons/github.svg")}
-a#github_link:hover {filter: invert(18%) sepia(20%) saturate(0%) hue-rotate(144deg) brightness(99%) contrast(99%);}
-a#github_link:active {filter: invert(37%) sepia(0%) saturate(0%) hue-rotate(147deg) brightness(91%) contrast(93%);}
-
-a#questions_concerns {
-    color: white;
-    line-height: 32px;
-    margin-left: 0.75em;
-    cursor: default;
-    user-select: none;
-}
-
-a#questions_concerns:hover {
-    color: orange;
-}
-
-#hidden_message {
-    display: none;
-    position: absolute;
-    top: 38px;
-    right: 0;
-    width: 256px;
-    background-color: white;
-    padding: 1em;
-    border: 3px solid #333333;
-    box-sizing: border-box;
-}
+li.pdf {background-image: url("../icons/pdf.svg")}
+li.ppt {background-image: url("../icons/ppt.svg")}
+li.pptx {background-image: url("../icons/ppt.svg")}
+li.txt {background-image: url("../icons/txt.svg")}

@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Indexing Tool</title>
+    <meta name="author" content="doakey3">
+    <meta name="description" content="Evaluates what files still need to be indexed.">
+    
+    <script src="js/PublicIndex.js"></script>
+    <script src="js/SensitiveIndex.js"></script>
+    
+    <style>
+        #not_indexed_list, #wrongly_indexed_list, #duplicates_list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        #not_indexed_list table {
+            padding-left: 40px;
+            width: 100%;
+        }
+        
+        #not_indexed_list td:first-child {
+            width: 0;
+        }
+        #not_indexed_list input {
+            width: calc(100% - 40px);
+        }
+        
+        #not_indexed_list li {
+            background-color: #e6e6e6;
+            padding: 5px;
+        }
+        
+        #not_indexed_list li:nth-child(2n) {
+            background-color: lightgray;
+        }
+        
+        #wrongly_indexed_list li {
+            color: red;
+        }
+        
+        #duplicates_list li {
+            color: red;
+        }
+        
+        #folderpicker {
+            display: none;
+        }
+        #not_indexed_container, #wrongly_indexed_container, #duplicates_container, #save_indices_button {
+            display: none;
+        }
+        #youregood {
+            display: none;
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+<h1>Indexing Tool</h1>
+<button id="browser">Upload resources folder</button>
+<input type="file" id="folderpicker" webkitdirectory directory multiple autocomplete="off">
+<div id="duplicates_container">
+    <h2 style="margin-bottom: 0;">The following files/folders do not have a unique name.</h2>
+    <span>Remove duplicates and ensure files have unique file names. <b>Do this step before doing anything else.</b></span>
+    <br><br>
+    <ul id="duplicates_list"></ul>
+</div>
+<div id="not_indexed_container">
+    <h2>The following files are not indexed:</h2>
+    <ul id="not_indexed_list"></ul>
+</div>
+<br>
+<div id="wrongly_indexed_container">
+    <h2 style="margin-bottom: 0;">The following files are indexed, but are not in the resources folder</h2>
+    <span>They'll automatically be removed from the new indices.</span>
+    <br><br>
+    <ul id="wrongly_indexed_list"></ul>
+</div>
+<br>
+<div id="youregood">
+    <p>Check's Done. You're good.</p>
+</div>
+<br>
+<button id="save_indices_button">Save New Indices</button>
+<br>
+<br>
+
+</body>
+
+<script>
+try {
+    var filesindex = Object.assign({}, PublicIndex, SensitiveIndex);
+}
+catch(err) {
+    if (err instanceof ReferenceError) {
+        var filesindex = Object.assign({}, PublicIndex);
+    }
+}
+
+var filesindex_paths = []
+var keys = Object.keys(filesindex);
+for (var i = 0; i < keys.length; i++) {
+    filesindex_paths.push(filesindex[keys[i]]["path"]);
+}
+
+document.getElementById("browser").addEventListener("click", function() {
+    document.getElementById("folderpicker").click();
+});
+
+var is_sub_html = function(relative_path, all_filepaths) {
+    // Returns true if the html is in a sub folder beneath a parent html
+    var depth = relative_path.replace(/\.\/resources\/Sensitive\//, "").replace(/\.\/resources\/Public\//, "").split("/").length;
+    
+    for (var i = 0; i < all_filepaths.length; i++) {
+        var extension = all_filepaths[i].split(".").pop().toLowerCase();
+        if (extension == "html") {
+            var comp_depth = all_filepaths[i].replace(/\.\/resources\/Sensitive\//, "").replace(/\.\/resources\/Public\//, "").split("/").length;
+            if (comp_depth > 1 && comp_depth < depth) {
+                return true;
+            }
+        }
+    }
+    return false;
+}
+    
+var fpicker = document.getElementById("folderpicker");
+fpicker.addEventListener("change", function(event) {
+    document.getElementById("browser").style.display = "none";
+    
+    var files = event.target.files;
+    var acceptable_types = ["html", "pdf", "docx", "txt", "ppt", "pptx", "docx", "csv", "xlsx", "one"];
+    var potentials = [];
+    for (var i = 0; i < files.length; i++) {
+        var extension = files[i].webkitRelativePath.split(".").pop().toLowerCase();
+        if (acceptable_types.indexOf(extension) > -1) {
+            potentials.push("./" + files[i].webkitRelativePath);
+        }
+    }
+
+    var finalized = [];
+    for (var i = 0; i < potentials.length; i++) {
+        var extension = potentials[i].split(".").pop().toLowerCase();
+        if (extension == "html") {
+            if (!is_sub_html(potentials[i], potentials)) {
+                finalized.push(potentials[i]);
+            }
+        }
+        else {
+            finalized.push(potentials[i]);
+        }
+    }
+    
+    var filenames = [];
+    var duplicate_filenames = [];
+    for (var i = 0; i < finalized.length; i++) {
+        var filename = finalized[i].split("/").pop();
+        
+        if (filename == "index.html") {
+            var pieces = finalized[i].split("/");
+            filename = pieces[pieces.length - 2];
+        }
+        if (filenames.indexOf(filename) > -1) {
+            duplicate_filenames.push(filename);
+        }
+        else {
+            filenames.push(filename);
+        }
+    }
+    
+    window.duplicates = [];
+    for (var i = 0; i < finalized.length; i++) {
+        var filename = finalized[i].split("/").pop();
+        
+        if (filename == "index.html") {
+            var pieces = finalized[i].split("/");
+            filename = pieces[pieces.length - 2];
+        }
+        
+        if (duplicate_filenames.indexOf(filename) > -1) {
+            duplicates.push(finalized[i]);
+        }
+    }
+    
+    window.not_indexed = [];
+    for (var i = 0; i < finalized.length; i++) {
+        if (filesindex_paths.indexOf(finalized[i]) == -1) {
+            window.not_indexed.push(finalized[i]);
+        }
+    }
+    
+    window.wrongly_indexed = [];
+    for (var i = 0; i < filesindex_paths.length; i++) {
+        if (finalized.indexOf(filesindex_paths[i]) == -1) {
+            wrongly_indexed.push(filesindex_paths[i]);
+        }
+    }
+    
+    window.not_indexed_list = document.getElementById("not_indexed_list");
+    if (window.not_indexed.length > 0) {
+        document.getElementById("not_indexed_container").style.display = "block";
+    }
+    for (var i = 0; i < window.not_indexed.length; i++) {
+        var li = document.createElement("li");
+        li.className = "not_indexed_bullet";
+        li.path = window.not_indexed[i]
+        
+        var filename = window.not_indexed[i].split("/").pop();
+        
+        if (filename == "index.html") {
+            var pieces = window.not_indexed[i].split("/");
+            filename = pieces[pieces.length - 2];
+        }
+        li.filename = filename;
+        
+        not_indexed_list.appendChild(li);
+        
+        var span = document.createElement("span");
+        span.innerHTML = not_indexed[i];
+        li.appendChild(span);
+        
+        var table = document.createElement("table");
+        li.appendChild(table);
+        
+        var tr = document.createElement("tr");
+        table.appendChild(tr);
+        var tr2 = document.createElement("tr");
+        table.appendChild(tr2);
+        var tr3 = document.createElement("tr");
+        table.appendChild(tr3);
+        
+        var title_td = document.createElement("td");
+        title_td.innerHTML = "title:";
+        tr.appendChild(title_td);
+        
+        var title_input_td = document.createElement("td");
+        var title_input = document.createElement("input");
+        title_input.className = "title_input";
+        title_input.type = "text";
+        title_input_td.appendChild(title_input);
+        tr.appendChild(title_input_td);
+        
+        var desc_td = document.createElement("td");
+        desc_td.innerHTML = "desc:";
+        tr2.appendChild(desc_td);
+        
+        var desc_input_td = document.createElement("td");
+        var desc_input = document.createElement("input");
+        desc_input.className = "desc_input";
+        desc_input.type = "text";
+        desc_input_td.appendChild(desc_input);
+        tr2.appendChild(desc_input_td);
+        
+        var tags_td = document.createElement("td");
+        tags_td.innerHTML = "tags:";
+        tr3.appendChild(tags_td);
+        
+        var tags_input_td = document.createElement("td");
+        var tags_input = document.createElement("input");
+        tags_input.className = "tag_input";
+        tags_input.type = "text";
+        tags_input_td.appendChild(tags_input);
+        tr3.appendChild(tags_input_td);   
+    };
+    
+    var wrongly_indexed_list = document.getElementById("wrongly_indexed_list");
+    if (window.wrongly_indexed.length > 0) {
+        document.getElementById("wrongly_indexed_container").style.display = "block";
+    }
+    for (var i = 0; i < window.wrongly_indexed.length; i++) {
+        var li = document.createElement("li");
+        li.innerHTML = window.wrongly_indexed[i];
+        wrongly_indexed_list.appendChild(li);
+    }
+    
+    var duplicates_list = document.getElementById("duplicates_list");
+    if (window.duplicates.length > 0) {
+        document.getElementById("duplicates_container").style.display = "block";
+    }
+    for (var i = 0; i < window.duplicates.length; i++) {
+        var li = document.createElement("li");
+        li.innerHTML = duplicates[i];
+        duplicates_list.appendChild(li);
+    }
+        
+    var save_indices_button = document.getElementById("save_indices_button");
+    if (window.not_indexed.length > 0 || window.wrongly_indexed.length > 0) {
+        save_indices_button.style.display = "block";
+    }
+    else {
+        document.getElementById("youregood").style.display = "block";
+    }
+});
+
+var dict2string = function(d, variable) {
+    var parts = [];
+    var keys = Object.keys(d).sort();
+    for (var i = 0; i < keys.length; i++) {
+        part = '"' + keys[i] + '": {\n    "title": "' + d[keys[i]]["title"] + '",\n    "desc": "' + d[keys[i]]["desc"] + '",\n    "tags": "' + d[keys[i]]["tags"] + '",\n    "path": "' + d[keys[i]]["path"] + '"\n}';
+        parts.push(part);
+    }
+    
+    var output = "var " + variable + " = {\n\n" + parts.join(",\n\n") + "\n\n};";
+    
+    return output;
+}
+
+var check_inputs = function(inputs) {
+    for (var i = 0; i < inputs.length; i++) {
+        if (inputs[i].value == "") {
+            var parent = inputs[i].parentElement.closest("li");
+            var path = parent.path;
+            alert("Please fill in the title, description, and tags for " + path);
+            return false;
+        }
+    }
+    return true;
+}
+
+var check_tags = function(inputs) {
+    console.log(inputs);
+    for (var i = 0; i < inputs.length; i++) {
+        if (!inputs[i].value.replace(/^\s+/g, "").replace(/\s+$/, "").match(/^([A-Za-z0-9'\-&\+\%\$\/]+,\s?)*[A-Za-z0-9'\-&\+\%\$\/]+$/)) {
+            var parent = inputs[i].parentElement.closest("li");
+            var path = parent.path;
+            alert("Please fix the tags for " + path + ". Tags should be single words separated by a comma, like this: 'dog, cat, sheep, cow'");
+            return false;
+        }
+    }
+    return true;
+}
+
+var save_text_file = function(text, filename) {
+    var file = new Blob([text], {type: "text/plain;charset=utf-8"});
+    var a = document.createElement("a"),
+    url = URL.createObjectURL(file);
+    a.href = url;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    setTimeout(function() {
+        document.body.removeChild(a);
+        window.URL.revokeObjectURL(url);
+    }, 0);
+}
+
+save_indices_button.addEventListener("click", function() {
+    var title_inputs = document.getElementsByClassName("title_input");
+    var title_inputs_ok = check_inputs(title_inputs);
+    
+    var desc_inputs = document.getElementsByClassName("desc_input");
+    var desc_inputs_ok = check_inputs(desc_inputs);
+    
+    var tag_inputs = document.getElementsByClassName("tag_input");
+    var tag_inputs_ok = check_inputs(tag_inputs);
+    
+    var tags_formatted_ok = check_tags(tag_inputs);
+    
+    if (title_inputs_ok && desc_inputs_ok && tag_inputs_ok && tags_formatted_ok) {
+    
+        try {
+            var keys = Object.keys(SensitiveIndex);
+            for (var i = 0; i < keys.length; i++) {
+                if (window.wrongly_indexed.indexOf(SensitiveIndex[keys[i]]["path"]) > -1) {
+                    delete SensitiveIndex[keys[i]];
+                }
+            }
+        }
+        catch(err) {
+            if (err instanceof ReferenceError) {
+                //pass
+            }
+        }
+        
+        var keys = Object.keys(PublicIndex)
+        for (var i = 0; i < keys.length; i++) {
+            if (window.wrongly_indexed.indexOf(PublicIndex[keys[i]]["path"]) > -1) {
+                delete PublicIndex[keys[i]];
+            }
+        }
+        
+        var lis = document.getElementsByClassName("not_indexed_bullet");
+        for (var i = 0; i < lis.length; i++) {
+            var path = lis[i].path;
+            var key = lis[i].filename;
+            var title = lis[i].getElementsByClassName("title_input")[0].value.replace(/^\s+/g, "").replace(/\s+$/, "");
+            var desc = lis[i].getElementsByClassName("desc_input")[0].value.replace(/^\s+/g, "").replace(/\s+$/, "");
+            var tags = lis[i].getElementsByClassName("tag_input")[0].value.replace(/^\s+/g, "").replace(/\s+$/, "");
+            
+            var d = {
+                "title": title,
+                "desc": desc,
+                "tags": tags,
+                "path": path
+            }
+            
+            if (path.match(/\.\/resources\/Sensitive/)) {
+                SensitiveIndex[key] = d;
+            }
+            else {
+                PublicIndex[key] = d;
+            }
+        }
+        
+        save_text_file(dict2string(SensitiveIndex, "SensitiveIndex"), "SensitiveIndex.js");
+        save_text_file(dict2string(PublicIndex, "PublicIndex"), "PublicIndex.js");
+    }
+});
+
+</script>
+
+</html>
