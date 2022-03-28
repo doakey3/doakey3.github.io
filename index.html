@@ -10,9 +10,20 @@
     <link rel="stylesheet" href="css/style.css">
     
     <script src="js/LinksIndex.js"></script>
-    <script src="js/ExtraneousIndex.js"></script>
     <script src="js/PublicIndex.js"></script>
-    <script src="js/SensitiveIndex.js"></script>
+    
+    <script>
+        if (window.location.protocol === "file:") {
+            var extraneous_script = document.createElement("script");
+            extraneous_script.src = "js/ExtraneousIndex.js";
+            document.head.appendChild(extraneous_script)
+            
+            var sensitive_script = document.createElement("script");
+            sensitive_script.src = "js/SensitiveIndex.js";
+            document.head.appendChild(sensitive_script);
+        }
+    </script>
+    
 </head>
 <body>
     <input type="text" id="searchbar" placeholder="Search..." autocomplete="off" autofocus>
@@ -24,5 +35,12 @@
     </div>
 </body>
 
-<script src="js/setup_scroll_list.js"></script>
+<!--<script src="js/setup_scroll_list.js"></script>-->
+
+<script>
+    var setup_scroll_list_script = document.createElement("script");
+    setup_scroll_list_script.src = "js/setup_scroll_list.js";
+    document.body.appendChild(setup_scroll_list_script);
+</script>
+
 </html>
