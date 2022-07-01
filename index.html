@@ -27,6 +27,10 @@
             var sensitive_script = document.createElement("script");
             sensitive_script.src = "js/SensitiveIndex.js";
             document.head.appendChild(sensitive_script);
+            
+            var personal_script = document.createElement("script");
+            personal_script.src = "js/PersonalIndex.js";
+            document.head.appendChild(personal_script);
         }
     </script>
     
@@ -42,9 +46,11 @@
 </body>
 
 <script>
-    var setup_scroll_list_script = document.createElement("script");
-    setup_scroll_list_script.src = "js/setup_scroll_list.js";
-    document.body.appendChild(setup_scroll_list_script);
+    setTimeout(function(){
+        var setup_scroll_list_script = document.createElement("script");
+        setup_scroll_list_script.src = "js/setup_scroll_list.js";
+        document.body.appendChild(setup_scroll_list_script);
+    }, 0);
 </script>
 
 </html>

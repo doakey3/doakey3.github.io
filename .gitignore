@@ -1,7 +1,8 @@
 /js/ExtraneousIndex.js
 /js/SensitiveIndex.js
+/js/PersonalIndex.js
+/js/fixer.py
 /resources/Sensitive
-Doakey.lnk
-README.txt
-serve.sh
+/resources/ProcessPending
+/resources/Personal
 logo.svg

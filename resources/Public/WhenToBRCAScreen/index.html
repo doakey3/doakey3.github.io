@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>When to Screen for BRCA</title>
+    <meta name="author" content="doakey3">
+    
+    <meta name="author" content="doakey3"> 
+    <meta name="description" content="A checklist for when to get BRCA screening">
+    <meta name="keywords" content="breast, lump, cancer, template, checklist, brca, screening, when, to, screen, for">
+    
+    <link rel="stylesheet" href="css/grow_wrap.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+<h1>When to Screen for BRCA</h1>
+<div class="grow-wrap">
+<textarea class="checkable resizable" spellcheck="false" autocomplete="off">
+When to Complete Genetic Testing for BRCA:
+(    ) 2 first-degree relatives with breast cancer, 1 of whom was diagnosed at age 50 or younger
+(    ) A combination of 3 or more first- or second-degree relatives with breast cancer regardless of age at diagnosis
+(    ) A combination of both breast and ovarian cancer among first- and second-degree relatives
+(    ) A first-degree relative with bilateral breast cancer
+(    ) A combination of 2 or more first- or second-degree relatives with ovarian cancer, regardless of age at diagnosis
+(    ) History of breast cancer in a male relative
+(    ) Ashkenazi Jewish descent and any first-degree relative or 2 second-degree relatives with breast or ovarian cancer
+</textarea>
+</div>
+
+<div id="notes">
+<p>When ordering a BRCA test, you'll need to complete the test requisition form and the patient consent forms available at <a href="https://www.milsuite.mil/book/groups/dha-genetics-reference-laboratory">https://www.milsuite.mil/book/groups/dha-genetics-reference-laboratory</a></p>
+<img src="./media/brca_consent.jpg">
+<p>Alternatively, just refer the patient to a geneticist.</p>
+</div>
+
+<div id="references">
+    <h2>References</h2>
+    <ul>
+        <li>Uptodate. <a href="https://www.uptodate.com/contents/image?imageKey=ONC%2F57434">Recommendations from the United States Preventative Services Task Force on who should be offered genetic testing for BRCA mutations</a></li>
+    </ul>
+</div>
+
+<div id="disclaimer">
+    <p>This page was last updated on <span class="last_updated"></span></p>
+    <p><b>Disclaimer</b>: Information presented in the template should be re-checked and should not be used alone to guide patient care or substitute for clinical judgement.</p>
+    <p><b>Note</b>: Please copy text into the EMR prior to adding any HIPPA information. Though no information is being saved/transmitted on this site, typing private information into a web page is generally bad practice.</p>
+</div>
+
+</body>
+
+<script src="js/setup_resizables.js"></script>
+<script src="js/setup_boxes.js"></script>
+
+<script>
+    var textarea = document.getElementsByClassName("checkable")[0];
+    textarea.focus();
+</script>
+
+<script>
+    last_updateds = document.getElementsByClassName("last_updated");
+    for (var i = 0; i < last_updateds.length; i++) {
+        var mydate = new Date(document.lastModified);
+        var newdate = new Intl.DateTimeFormat("en-US", {year: "numeric", month: "long", day: "numeric"}).format(mydate).replace(/\./g, '-');
+        last_updateds[i].innerHTML = newdate;
+    } 
+</script>
+</html>

@@ -10,13 +10,30 @@
     
     var ul = document.getElementById("scroll_list");
     
+    var filesindex = {};
+    keys = Object.keys(PublicIndex);
+    for (var i = 0; i < keys.length; i++) {
+        filesindex[keys[i]] = PublicIndex[keys[i]];
+        filesindex[keys[i]]["path"] = "./resources/Public/" + filesindex[keys[i]]["path"];
+    }
+    
     try {
-        var filesindex = Object.assign({}, PublicIndex, SensitiveIndex, ExtraneousIndex);
+        var keys = Object.keys(SensitiveIndex);
+        for (var i = 0; i < keys.length; i++) {
+            filesindex[keys[i]] = SensitiveIndex[keys[i]];
+            filesindex[keys[i]]["path"] = "./resources/Sensitive/" + filesindex[keys[i]]["path"];
+        }
+        
+        var keys = Object.keys(PersonalIndex);
+        for (var i = 0; i < keys.length; i++) {
+            filesindex[keys[i]] = PersonalIndex[keys[i]];
+            filesindex[keys[i]]["path"] = "./resources/Personal/" + filesindex[keys[i]]["path"];
+        }
+        
+        var filesindex = Object.assign({}, filesindex, ExtraneousIndex);
     }
     catch(err) {
-        if (err instanceof ReferenceError) {
-            var filesindex = Object.assign({}, PublicIndex);
-        }
+        // Pass
     }
     
     var link_keys = Object.keys(LinksIndex);
