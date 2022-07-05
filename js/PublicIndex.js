@@ -257,6 +257,12 @@ var PublicIndex = {
     "tags": "potassium, calcium, magnesium, phosphorous, phosphate, electrolyte, repletion",
     "path": "ElectrolyteRepletionGuide/index.html"
 },
+"EpidermalInclusionCystTemplate": {
+    "title": "Epidermal Inclusion Cyst Template",
+    "desc": "Epidermal Inclusion Cyst Template",
+    "tags": "dermatology, epidermal, inclusion, cyst, template",
+    "path": "EpidermalInclusionCystTemplate/index.html"
+},
 "FODMAPFoods": {
     "title": "FODMAP Foods",
     "desc": "Foods that are less likely to cause gas and bowel pain.",
