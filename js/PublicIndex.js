@@ -215,6 +215,12 @@ var PublicIndex = {
     "tags": "ted, hoes, compression, stocking, sock, edema, stockings, guide",
     "path": "CompressionStockingsGuide/index.html"
 },
+"CushingsTemplate": {
+    "title": "Cushings Template",
+    "desc": "A template for diagnosing cushings disease",
+    "tags": "cushings, template, syndrome, disease",
+    "path": "CushingsTemplate/index.html"
+},
 "DeathNoteTemplate": {
     "title": "Death Note Template",
     "desc": "A template for writing the note for a patient who has died in the hospital.",
@@ -455,6 +461,12 @@ var PublicIndex = {
     "tags": "handout, htn, hypertension, blood, pressure, nonpharmacologic, bp",
     "path": "LowerBPwoMeds/index.html"
 },
+"LowerExtremityEdemaTemplate": {
+    "title": "Lower Extremity Edema Template",
+    "desc": "A template for charting on lower extremity edema.",
+    "tags": "lower, extremity, edema, template, swelling, leg, claudication, venous, insufficiency, compression, stockings",
+    "path": "LowerExtremityEdemaTemplate/index.html"
+},
 "M-CHAT-RF.pdf": {
     "title": "Modified Checklist for Autism in Toddlers-Revised, M-CHAT-RF",
     "desc": "Evaluates for autism in those aged 16-30 months",
@@ -551,6 +563,12 @@ var PublicIndex = {
     "tags": "washington, patient, centered, observation, scoring, form, clinical, skills, clinician",
     "path": "PatientCenteredObservationForm.pdf"
 },
+"PostBariatricSurgeryTemplate": {
+    "title": "Post Bariatric Surgery Template",
+    "desc": "A checklist of things to do for taking care of a post-bariatric surgery patient.",
+    "tags": "post, bariatric, surgery, template, obesity, weight, gastric, sleeve",
+    "path": "PostBariatricSurgeryTemplate/index.html"
+},
 "Postpartum6WkTemplate": {
     "title": "Postpartum 4-12 Week Visit Template",
     "desc": "A checklist template for things to review on the postpartum visits",
@@ -623,6 +641,12 @@ var PublicIndex = {
     "tags": "suicidal, suicide, homocide, homocidal, self, harm, death, template",
     "path": "SuicidalIdeationTemplate/index.html"
 },
+"SuturingGuide": {
+    "title": "Suturing Guide",
+    "desc": "Key information for suturing",
+    "tags": "sewing, suturing, repair, laceration, stitching",
+    "path": "SuturingGuide/index.html"
+},
 "T2DMTemplate": {
     "title": "Type 2 Diabetes Mellitus Template",
     "desc": "A template for charting on T2DM",
@@ -646,6 +670,12 @@ var PublicIndex = {
     "desc": "A template for charting on GERD",
     "tags": "tobacco, cessation, smoking, addiction, cigarette, cigar, chewing",
     "path": "TobaccoCessationTemplate/index.html"
+},
+"TopicalSteroidPotencyGuide": {
+    "title": "Topical Steroid Potency Guide",
+    "desc": "A list of topical steroids and their potencies",
+    "tags": "topical, steroids, potency, strength",
+    "path": "TopicalSteroidPotencyGuide/index.html"
 },
 "VasectomyTemplate": {
     "title": "Vasectomy Template",
