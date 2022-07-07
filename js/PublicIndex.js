@@ -579,19 +579,19 @@ var PublicIndex = {
     "title": "Postpartum 4-12 Week Visit Template",
     "desc": "A checklist template for things to review on the postpartum visits",
     "tags": "postpartum, pregnancy, 6, 12, 4, twelve, four, week, 6-week, six, template, visit",
-    "path": "tpartum6WkTemplate/index.html"
+    "path": "Postpartum6WkTemplate/index.html"
 },
 "PreOpEngine": {
     "title": "PreOp Engine",
     "desc": "Generate an assessment and plan for patients preparing to undergo surgery",
     "tags": "preop, preoperative, surgery, clearance, engine",
-    "path": "OpEngine/index.html"
+    "path": "PreOpEngine/index.html"
 },
 "PrevasectomyTemplate": {
     "title": "Prevasectomy Template",
     "desc": "A template for charting on GERD",
     "tags": "vasectomy, prevasectomy, sterilization, procedure, surgery, contraception, template",
-    "path": "vasectomyTemplate/index.html"
+    "path": "PrevasectomyTemplate/index.html"
 },
 "SacralDysfunctionsGuide": {
     "title": "Sacral Dysfunctions Guide",
@@ -693,7 +693,7 @@ var PublicIndex = {
     "title": "Well Child 2 Months Old Template",
     "desc": "For documenting on a child for their wellness visit at 2 months of age",
     "tags": "well, child, exam, visit, wellness, 2, two, months, old",
-    "path": "WellChild2Months/index.html"
+    "path": "WellChild02Months/index.html"
 },
 "WellChild04Months": {
     "title": "Well Child 4 Months Old Template",
