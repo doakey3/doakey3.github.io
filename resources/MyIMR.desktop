@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Type=Link
+Name=MyIMR
+Comment=For inputting your IMR/ASIMS information as a patient.
+Icon=firefox
+URL=https://asims.afms.mil/webapp/MyIMR.aspx
+Keywords=imr; asims; myimr; my

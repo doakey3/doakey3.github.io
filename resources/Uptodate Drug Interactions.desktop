@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Type=Link
+Name=Uptodate Drug Interactions
+Comment=A tool for checking if multiple drugs interact poorly with eachother.
+Icon=firefox
+URL=https://www.uptodate.com/drug-interactions/?source=responsive_home#di-druglist
+Keywords=uptodate; drugs; interactions; lexicomp; medications

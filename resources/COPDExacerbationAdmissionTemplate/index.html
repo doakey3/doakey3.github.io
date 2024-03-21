@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>COPD Exacerbation Admission Template</title>
+    <meta name="author" content="doakey3">
+    
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <meta name="author" content="doakey3"> 
+    <meta name="description" content="A template for admitting patients with COPD">
+    <meta name="keywords" content="chronic, obstructive, pulmonary, disease, copd, exacerbation, cough, tobacco, smoking, cigarette">
+    
+    <link rel="stylesheet" href="css/grow_wrap.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+<h1>COPD Exacerbation Template</h1>
+<div class="grow-wrap">
+<textarea class="checkable resizable" spellcheck="false" autocomplete="off">
+Diagnostic Criteria:
+(    ) Increased cough frequency/severity
+(    ) Increased sputum volume/purulence
+(    ) Increased dyspnea
+
+Features of severe respiratory insufficiency:
+(    ) Use of accessory muscles
+(    ) Fragmented speech
+(    ) Inability to lie supine
+(    ) Profound diaphoresis
+(    ) Agitation
+(    ) Asynchrony between chest and abdominal motion with respiration
+(    ) Failure to improve with initial emergency treatment
+
+Features of impending respiratory arrest:
+(    ) Jugular venous distention
+(    ) Prominent left parasternal heave
+(    ) Peripheral edema
+
+Contraindications to non-invasive ventilation:
+(    ) Inability to protect the airway or clear secretions
+(    ) Severely impaired consciousness
+(    ) Nonrespiratory organ failure that is acutely life-threatening
+(    ) High aspiration risk
+(    ) Inability to cooperate
+(    ) Facial surgery, trauma, or deformity
+(    ) Recent esophageal anastomosis
+
+Pseudomonas risk factors:
+(    ) Broad spectrum antibiotic use in the past 3 months
+(    ) Chronic colonization or previous isolation of Pseudomonas aeruginosa from sputum (particularly in past 12 months)
+(    ) Very severe underlying COPD (FEV1 &lt; 30 percent predicted)
+(    ) Chronic systemic glucocorticoid use
+
+Indications for ICU Admission:
+(    ) High risk comorbidities (pneumonia, cardiac arrythmia, heart failure, diabetes mellitus, renal failure, liver failure
+(    ) Prolonged need for NIV or invasive ventilation
+(    ) Hemodynamic instability
+(    ) Need for frequent nebulizer treatments or monitoring
+
+Management:
+- supplemental oxygen, target SpO2 88-92%
+- start BiPAP at 8 cm H2O inspiratory, 3 cm H2O expiratory; may increase inspiratory to 15 cm H2O to aid ventilation
+- obtain initial ABG
+- obtain repeat ABG 2 hours after starting non-invasive ventilation
+- start albuterol 2.5mg/3mL nebulizer Q1H x 3 doses, then Q4H
+- start ipratropium 500 mcg nebulizer Q1H x 3 doses, then Q4H
+- start prednisone 40 mg PO daily x 5 days
+- check fingerstick glucose Q4H while on steroids
+- continue home medications such as advair and singulair
+- check chest X-ray (PA &amp; Lateral)
+- check for influenza during flu season
+- check a sputum culture
+- ensure flu vaccine &amp; pneumovax prior to discharge
+- start continuous pulse oximetry
+- (low pseudomonas risk) start ceftriaxone 1 g IV Q24H
+- (pseudomonas risk) zosyn 4.5 g IV
+- start oseltamivir 75 mg PO BID if flu infection is suspected
+- telemetry
+- pharmacologic thromboprophylaxis recommended
+- nutritional supplementation likely beneficial
+- nicotine patches</textarea>
+</div>
+
+<div id="notes">
+    <p>If the 2 hour ABG shows worsening or unimproved gas exchange and pH &lt; 7.25, intubation is likely necessary</p>
+</div>
+
+<div id="references">
+    <h2>References</h2>
+    <ul>
+        <li>Uptodate <a href="https://www.uptodate.com/contents/copd-exacerbations-management#!">COPD exacerbations: Management</a>. The information in the template is practically all from this site.</li>
+    </ul>
+</div>
+
+<div id="disclaimer">
+    <p>This page was last updated on <span class="last_updated"></span></p>
+    <p><b>Disclaimer</b>: Information presented in the template should be re-checked and should not be used alone to guide patient care or substitute for clinical judgement.</p>
+    <p><b>Note</b>: Please copy text into the EMR prior to adding any HIPPA information. Though no information is being saved/transmitted on this site, typing private information into a web page is generally bad practice.</p>
+</div>
+</body>
+
+<script src="js/setup_resizables.js"></script>
+<script src="js/setup_boxes.js"></script>
+<script>
+    var textarea = document.getElementsByClassName("checkable")[0];
+    textarea.focus();
+</script>
+<script>
+    last_updateds = document.getElementsByClassName("last_updated");
+    for (var i = 0; i < last_updateds.length; i++) {
+        var mydate = new Date(document.lastModified);
+        var newdate = new Intl.DateTimeFormat("en-US", {year: "numeric", month: "long", day: "numeric"}).format(mydate).replace(/\./g, '-');
+        last_updateds[i].innerHTML = newdate;
+    } 
+</script>
+</html>

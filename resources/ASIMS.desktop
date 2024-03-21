@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Type=Link
+Name=ASIMS
+Comment=Links to ASIMS; useful for updating military profiles, PHA's, sickle cell statuses, and adding to AMRO. Note this will require a CAC card to login.
+Icon=firefox
+URL=https://asims.health.mil/webapp/login.aspx
+Keywords=military; ASIMS; link

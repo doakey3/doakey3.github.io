@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Type=Link
+Name=Express Scripts Provider Portal
+Comment=For approving/editing patient prescriptions on Express Scripts.
+Icon=firefox
+URL=https://portal.mtfprovider.express-scripts.com/frontend/mtfportal/#/
+Keywords=prescribe; prescription; medication; medicine; drug; approve; link; express; scripts; provider; portal

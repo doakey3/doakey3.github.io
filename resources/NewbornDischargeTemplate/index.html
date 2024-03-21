@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Newborn Discharge Template</title>
+    <meta name="author" content="doakey3">
+    
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <meta name="author" content="doakey3"> 
+    <meta name="description" content="A template">
+    <meta name="keywords" content="newborn, birth, discharge, template">
+    
+    <link rel="stylesheet" href="css/grow_wrap.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+<h1>Newborn Discharge Template</h1>
+
+<div class="grow-wrap">
+<textarea class="checkable resizable" spellcheck="false" autocomplete="off">
+This is a [term/preterm] [AGA/SGA/LGA] [male/female] born via [vaginal/cesarean] delivery to a [age] year old G[gravida] now P[term, para, aborta, living] mother whose prenatal course was complicated by [complications]. At delivery, the infant received routine resucitation, APGARs of [1 min] and [5 min]. Infant is feeding, stooling, and voiding appropriately.
+
+Birth Wt: [weight]
+Discharge Wt: [weight]
+Birth Length: [length]
+Birth Head Circumference: [circumference]
+Transcutaneous Bilirubin at 24 hours: [bili level]
+Blood Type: [type]
+DAT: [neg/pos]
+Breastfeeding: [Yes/No]
+
+Pre-Discharge To Do List:
+(    ) Hepatitis B vaccine
+(    ) Vitamin K intramuscular injection
+(    ) Erythromycin eye drops
+(    ) Hearing screen
+(    ) Newborn metabolic screening collected
+(    ) Period of PURPLE crying video shown and discussed
+(    ) Anticipatory guidance discussed (newborn counseling)
+(    ) Vitamin D 400 IU prescribed for breastfed infant
+
+Plan:
+- follow up weight and bilirubin check in 1-2 days, scheduled
+- follow up clinic visit in 2 weeks, scheduled
+- vitamin D supplementation
+</textarea>
+</div>
+
+<div id="references">
+    <h2>References</h2>
+    <ul>
+        <li>This was copied from another doctor's template. A review with cited sources is pending.</li>
+    </ul>
+</div>
+
+<div id="disclaimer">
+    <p>This page was last updated on <span class="last_updated"></span></p>
+    <p><b>Disclaimer</b>: Information presented in the template should be re-checked and should not be used alone to guide patient care or substitute for clinical judgement.</p>
+    <p><b>Note</b>: Please copy text into the EMR prior to adding any HIPPA information. Though no information is being saved/transmitted on this site, typing private information into a web page is generally bad practice.</p>
+</div>
+
+</body>
+
+<script src="js/setup_resizables.js"></script>
+<script src="js/setup_boxes.js"></script>
+<script>
+    var textarea = document.getElementsByClassName("checkable")[0];
+    textarea.focus();
+</script>
+<script>
+    last_updateds = document.getElementsByClassName("last_updated");
+    for (var i = 0; i < last_updateds.length; i++) {
+        var mydate = new Date(document.lastModified);
+        var newdate = new Intl.DateTimeFormat("en-US", {year: "numeric", month: "long", day: "numeric"}).format(mydate).replace(/\./g, '-');
+        last_updateds[i].innerHTML = newdate;
+    } 
+</script>
+</html>

@@ -1,0 +1,181 @@
+* {
+    font-family: tahoma;
+    font-size: 14pt;
+}
+
+a {
+    color: blue;
+    text-decoration: none;
+}
+
+#left, #middle, #right {
+    position: absolute;
+    top: 0;
+    overflow-y: scroll;
+    height: calc(100% - 32px);
+}
+
+#left {
+    left: 0;
+    width: 33%;
+    background-color: lightgray;
+    height: 100%;
+}
+
+#middle {
+    left: 33%;
+    width: 34%;
+    background-color: #e6ffe6;
+}
+
+#right {
+    right: 0;
+    width: 33%;
+    display: flex;
+    background-color: blue;
+}
+
+#reciever {
+    flex: 1;
+    resize: none;
+    border: none;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+input {
+    display: block;
+    width: calc(100% - 2em);
+    margin-right: auto;
+    margin-left: auto;
+    border: 0;
+}
+
+.button {
+    display: block;
+    width: calc(100% - 2em);
+    margin-right: auto;
+    margin-left: auto;
+    text-decoration: none;
+    background-color: white;
+    text-align: center;
+    padding: 4px;
+    border-radius: 2px;
+    color: black;
+    border: 3px solid transparent;
+}
+
+.button:hover {
+    border: 3px solid orange;
+}
+
+.button:active {
+    background-color: #b3d9ff;
+}
+
+.button.clicked {
+    background-color: #cce6ff;
+}
+
+.screening {
+    margin-bottom: 1em;
+    display: none;
+}
+
+.screening_title {
+    margin-left: 2px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    cursor: default;
+}
+
+.screening_title.required::after {
+    content: "*"
+}
+
+h3 {
+    margin: 0;
+    margin-left: 2px;
+}
+
+#info_box {
+    position: absolute;
+    height: calc(100% - 8px);
+    top: 0;
+    bottom: 0;
+    width: 33%;
+    right: 0;
+    background-color: black;
+    color: white;
+    padding: 4px;
+    display: none;
+}
+
+.input_section {
+    margin-bottom: 1em;
+}
+
+#process_btn, #generate_btn, #parse_btn {
+    position: absolute;
+    bottom: 0;
+    height: 32px;
+    text-align: center;
+}
+
+#process_btn {
+    left: 0;
+    width: 33%;
+}
+
+#generate_btn {
+    left: 33%;
+    width: 34%;
+}
+
+#parse_btn {
+    left: 67%;
+    width: 33%;
+}
+
+#process_btn a, #generate_btn a, #parse_btn a {
+    color: black;
+    font-weight: bold;
+    display: block;
+    height: calc(100% - 6px);
+    width: calc(100% - 6px);
+    line-height: 26px;
+}
+
+#process_btn a {
+    background-color: #ace600;
+    border: 3px solid #ace600;
+}
+
+#process_btn a:active {
+    background-color: #99cc00;
+}
+
+#generate_btn a {
+    background-color: #ff8533;
+    border: 3px solid #ff8533;
+}
+
+#process_btn a:hover, #generate_btn a:hover, #parse_btn a:hover {
+    border: 3px solid black;
+}
+
+#generate_btn a:active {
+    background-color: #ff751a;
+}
+
+#parse_btn a {
+    background-color: #884dff;
+    border: 3px solid #884dff;
+}
+
+#parse_btn a:active {
+    background-color: #7733ff;
+}

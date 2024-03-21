@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Vitamin D Deficiency Template</title>
+    <meta name="author" content="doakey3">
+    
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <meta name="author" content="doakey3"> 
+    <meta name="description" content="A template for charting on vitamin D Deficiency">
+    <meta name="keywords" content="vitamin, d, deficiency, d3, template">
+    
+    <link rel="stylesheet" href="css/grow_wrap.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+<h1>Vitamin D Deficiency Template</h1>
+<div class="grow-wrap">
+<textarea class="checkable resizable" spellcheck="false" autocomplete="off">
+< 12 (Severe deficiency)
+-Vit D3 50,000 IU weekly x 8 weeks, then 800 IU daily thereafter
+-recheck vitamin D level at 3 months
+
+12-20:
+-800-1000 IU daily
+-recheck vitamin D in 3 months
+    -if not corrected, increase the dose of vitamin D
+
+20-30 (Mild Deficiency)
+-Vit D3 600-800 IU daily</textarea>
+</div>
+
+<div id="references">
+    <h2>References</h2>
+    <ul>
+        <li>Uptodate. <a href="https://www.uptodate.com/contents/vitamin-d-deficiency-in-adults-definition-clinical-manifestations-and-treatment">Vitamin D deficiency in adults: Definition, clinical manifestations, and treatment</a>.</li>
+    </ul>
+</div>
+
+<div id="disclaimer">
+    <p>This page was last updated on <span class="last_updated"></span></p>
+    <p><b>Disclaimer</b>: Information presented in the template should be re-checked and should not be used alone to guide patient care or substitute for clinical judgement.</p>
+    <p><b>Note</b>: Please copy text into the EMR prior to adding any HIPPA information. Though no information is being saved/transmitted on this site, typing private information into a web page is generally bad practice.</p>
+</div>
+
+</body>
+
+<script src="js/setup_resizables.js"></script>
+<script src="js/setup_boxes.js"></script>
+<script>
+    var textarea = document.getElementsByClassName("checkable")[0];
+    textarea.focus();
+</script>
+<script>
+    last_updateds = document.getElementsByClassName("last_updated");
+    for (var i = 0; i < last_updateds.length; i++) {
+        var mydate = new Date(document.lastModified);
+        var newdate = new Intl.DateTimeFormat("en-US", {year: "numeric", month: "long", day: "numeric"}).format(mydate).replace(/\./g, '-');
+        last_updateds[i].innerHTML = newdate;
+    } 
+</script>
+</html>

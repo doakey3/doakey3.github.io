@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Type=Link
+Name=HAIMS
+Comment=Website for looking at patient documents.
+Icon=firefox
+URL=https://west.ecmbpm.mhsi.health.mil/home/Core/app/start/web
+Keywords=haims; documents; patient; off; base

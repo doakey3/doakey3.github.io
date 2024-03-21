@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>AHLTA Prev Med</title>
+    <meta name="author" content="doakey3">
+    <meta name="description" content="A tool for updating a patient's preventative medicine section.">
+    <meta name="keywords" content="ahlta, preventative, medicine">
+    
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="left">
+        <form autocomplete="off">
+            <div class="input_section" id="name_section">
+                <h3>Name <span style="font-size: 75%;">(optional)</span></h3>
+                <input type="text" id="name">
+            </div>
+            <div class="input_section" id="age_section">
+                <h3>Age</h3>
+                <input type="text" id="age" class="input integer_only">
+            </div>
+            
+            <div class="input_section" id="height_section">
+                <h3>Height</h3>
+                <table style="width: 100%;">
+                    <tr>
+                        <td><input id="height_inches" placeholder="inches" class="input float_only"></td>
+                        <td>or</td>
+                        <td><input type="text" placeholder="Centimeters" id="height_centimeters" class="input float_only"></td>
+                    </tr>
+                </table>
+            </div>   
+            
+            <div class="input_section" id="weight_section">
+                <h3>Weight</h3>
+                <table style="width: 100%;">
+                    <tr>
+                        <td><input type="text" placeholder="Pounds" id="weight_pounds" class="input float_only"></td>
+                        <td>or</td>
+                        <td><input type="text" placeholder="Kilograms" id="weight_kilograms" class="input float_only"></td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div class="input_section" id="birth_gender_section">
+                <h3>Birth Gender</h3>
+                <table style="width: 100%;">
+                    <tr>
+                        <td style="width: 50%;"><a href="javascript:void(0);" id="male_btn" class="button pair input">Male</a></td>
+                        <td style="width: 50%;"><a href="javascript:void(0);" id="female_btn" class="button pair input">Female</a></td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div class="input_section" id="postmenopausal_section" style="display: none;">
+                <h3>Postmenopausal</h3>
+                <table style="width: 100%;">
+                    <tr>
+                        <td style="width: 50%;"><a href="javascript:void(0);" id="postmenopausal_btn" class="button pair input">Yes</a></td>
+                        <td style="width: 50%;"><a href="javascript:void(0);" id="premenopausal_btn" class="button pair input">No</a></td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div class="input_section" id="tobacco_use_ever_section" style="display: none;">
+                <h3>Tobacco Use - Ever</h3>
+                <table style="width: 100%;">
+                    <tr>
+                        <td style="width: 50%;"><a href="javascript:void(0);" id="used_tobacco_btn" class="button pair input">Yes</a></td>
+                        <td style="width: 50%;"><a href="javascript:void(0);" id="never_used_tobacco_btn" class="button pair input">No</a></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="input_section" id="tobacco_pack_years_section" style="display: none;">
+                <h3>Tobacco Pack-Years</h3>
+                <input type="text" placeholder="Years" id="tobacco_years" class="float_only input">
+            </div>
+            
+            <div class="input_section" id="tobacco_last_use_section" style="display: none;">
+                <h3>Years Since Last Tobacco Use</h3>
+                <input type="text" placeholder="Years" id="tobacco_last_use" class="float_only input">            
+            </div>
+            
+            <div class="input_section" id="sexually_active_section">
+                <h3>Sexually Active</h3>
+                <table style="width: 100%;">
+                    <tr>
+                        <td style="width: 50%;"><a href="javascript:void(0);" id="sexually_active_btn" class="button pair input">Yes</a></td>
+                        <td style="width: 50%;"><a href="javascript:void(0);" id="sexually_inactive_btn" class="button pair input">No</a></td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div class="input_section" id="contraceptive_section" style="display: none;">
+                <h3>Using Contraceptive</h3>
+                <table style="width: 100%;">
+                    <tr>
+                        <td style="width: 50%;"><a href="javascript:void(0);" class="button pair input" id="using_contraceptive_btn">Yes</a></td>
+                        <td style="width: 50%;"><a href="javascript:void(0);" class="button pair input" id="not_using_contraceptive_btn">No</a></td>
+                    </tr>
+                </table>
+            </div>
+            
+        </form>
+    </div>
+    <div id="middle">
+        <form autocomplete="off">
+            <div class="screening" id="AAA"><a class="screening_title" href="javascript:void(0);" info="<h3>AAA</h3><p>The USPSTF recommends 1-time screening for abdominal aortic aneurysm (AAA) with ultrasonography in men aged 65 to 75 years who have ever smoked.</p>">AAA Screen</a><input type="text" placeholder="Abdominal ultrasound date and result"></div>
+            <div class="screening" id="BreastCancer"><a class="screening_title" href="javascript:void(0);" info="<h3>Breast Cancer</h3><p>The USPSTF recommends biennial screening mammography for women aged 50 to 74 years.</p>">Breast Cancer Screen</a><input type="text" placeholder="Mammogram date and result"></div>
+            <div class="screening" id="BreastCancerRiskAssessment"><a class="screening_title" href="javascript:void(0);" info="<h3>Breast Cancer Risk Assessment</h3><p>The USPSTF recommends that clinicians offer to prescribe risk-reducing medications, such as tamoxifen, raloxifene, or aromatase inhibitors, to women who are at increased risk for breast cancer and at low risk for adverse medication effects.</p><p>Numerous risk assessment tools, such as the National Cancer Institute (NCI) Breast Cancer Risk Assessment Tool, estimate a woman’s risk of developing breast cancer over the next 5 years. There is no single cutoff for defining increased risk for all women. Women at greater risk, such as those with at least a 3% risk for breast cancer in the next 5 years, are likely to derive more benefit than harm from risk-reducing medications and should be offered these medications if their risk of harms is low.</p>">Breast Cancer Risk Assessment</a><a href="https://bcrisktool.cancer.gov/calculator.html" target="_blank" style="float: right; margin-right: 1em;">Assessment Tool</a><input type="text" placeholder="Assessment date and result"></div>
+            <div class="screening" id="BRCARiskAssessment"><a class="screening_title" href="javascript:void(0);" info="<h3>BRCA Risk Assessment</h3><p>The USPSTF recommends that primary care clinicians assess women with a personal or family history of breast, ovarian, tubal, or peritoneal cancer or who have an ancestry associated with breast cancer susceptibility 1 and 2 (BRCA1/2) gene mutations with an appropriate brief familial risk assessment tool. Women with a positive result on the risk assessment tool should receive genetic counseling and, if indicated after counseling, genetic testing.</p><p>Tools evaluated by the USPSTF include the... 7-Question Family History Screening Tool.</p><p>Quick Screen: <b>Did any of your family members have breast, ovarian, or colon cancer?</b></p>">BRCA Risk Assessment</a><a href="https://www.timeofcare.com/the-fhs-7-tool/" target="_blank" style="float: right; margin-right: 1em;">BRCA Risk Tool</a><input type="text" placeholder="Screen date and result"></div>
+            <div class="screening" id="CervicalCancer"><a class="screening_title" href="javascript:void(0);" info="<h3>Cervical Cancer</h3><p>The USPSTF recommends screening for cervical cancer every 3 years with cervical cytology alone in women aged 21 to 29 years. For women aged 30 to 65 years, the USPSTF recommends screening every 3 years with cervical cytology alone, every 5 years with high-risk human papillomavirus (hrHPV) testing alone, or every 5 years with hrHPV testing in combination with cytology (cotesting). See the Clinical Considerations section for the relative benefits and harms of alternative screening strategies for women 21 years or older.</p>">Cervical Cancer Screen</a><input type="text" placeholder="Pap and HPV (if available) results and dates"></div>
+            <div class="screening" id="ColonCancer"><a class="screening_title" href="javascript:void(0);" info="<h3>Colon Cancer</h3><p>The USPSTF recommends screening for colorectal cancer in adults aged 45 to 75 years.</p>">Colon Cancer Screen</a><input type="text" placeholder="Colonoscopy or IFOB/FIT date and result, next due date"></div>
+            <div class="screening" id="Diabetes"><a class="screening_title" href="javascript:void(0);" info="<h3>Diabetes</h3><p>The USPSTF recommends screening for prediabetes and type 2 diabetes in adults aged 35 to 70 years who are overweight or obese. Clinicians should offer or refer patients with prediabetes to effective preventive interventions.</p>">Diabetes Screen</a><input type="text" placeholder="HbA1c date and result"></div>
+            <div class="screening" id="Folate"><a class="screening_title" href="javascript:void(0);" info="<h3>Folate Supplement</h3><p>The USPSTF recommends that all women who are planning or capable of pregnancy take a daily supplement containing 0.4 to 0.8 mg (400 to 800 µg) of folic acid.</p>">Folate Supplement</a><input type="text" placeholder="Using? YES/NO"></div>
+            <div class="screening" id="GonorrheaChlamydia"><a class="screening_title" href="javascript:void(0);" info="<h3>Gonorrhea &amp; Chlamydia</h3><p>The USPSTF recommends screening for chlamydia in all sexually active women 24 years or younger and in women 25 years or older who are at increased risk for infection.</p>">Gonorrhea &amp; Chlamydia Screen</a><input type="text" placeholder="GC &amp; Chlamydia urine/swab date and result"></div>
+            <div class="screening" id="HepC"><a class="screening_title" href="javascript:void(0);" info="<h3>Hepatitis C</h3><p>The USPSTF recommends screening for hepatitis C virus (HCV) infection in adults aged 18 to 79 years.</p>">Hepatitis C Screening</a><input type="text" placeholder="Hepatitis C ab (antibody) date and result"></div>
+            <div class="screening" id="HIV"><a class="screening_title" href="javascript:void(0);" info="<h3>HIV</h3><p>The USPSTF recommends that clinicians screen for HIV infection in adolescents and adults aged 15 to 65 years. Younger adolescents and older adults who are at increased risk of infection should also be screened. See the Clinical Considerations section for more information about assessment of risk, screening intervals, and rescreening in pregnancy.</p>">HIV Screening</a><input type="text" placeholder="HIV 1/O/2 result and date"></div>
+            <div class="screening" id="HIVRiskAssessment"><a class="screening_title" href="javascript:void(0);" info="<h3>HIV Risk</h3><p>The USPSTF recommends that clinicians offer preexposure prophylaxis (PrEP) with effective antiretroviral therapy to persons who are at high risk of HIV acquisition.</p><ul><li>Has a sexual partner with HIV</li><li>Man who has sex w/men &amp; inconsistent use of condoms</li><li>Infection w/syphilis, gonorrhea, or chlamydia in the last 6 months</li><li>Heterosexual and inconsistent condom use with a partner who is high risk (bisexual or IV drug user)</li><li>IV drug use and sharing needles</li></ul>">HIV Risk Assessment</a><input type="text" placeholder="Risk assessment date and result"></div>
+            <div class="screening" id="LungCancer"><a class="screening_title" href="javascript:void(0);" info="<h3>Lung Cancer</h3><p>The USPSTF recommends annual screening for lung cancer with low-dose computed tomography (LDCT) in adults aged 50 to 80 years who have a 20 pack-year smoking history and currently smoke or have quit within the past 15 years. Screening should be discontinued once a person has not smoked for 15 years or develops a health problem that substantially limits life expectancy or the ability or willingness to have curative lung surgery.</p>">Lung Cancer Screen</a><input type="text" placeholder="Low dose chest CT"></div>
+            <div class="screening" id="ObesityIntervention"><a class="screening_title" href="javascript:void(0);" info="<h3>Obesity Intervention</h3><p>The USPSTF recommends that clinicians offer or refer adults with a body mass index (BMI) of 30 or higher (calculated as weight in kilograms divided by height in meters squared) to intensive, multicomponent behavioral interventions.</p>">Obesity Intervention Offered</a><input type="text" placeholder="Date offered"></div>
+            <div class="screening" id="Osteoporosis"><a class="screening_title" href="javascript:void(0);" info="<h3>Osteoporosis</h3><p>The USPSTF recommends screening for osteoporosis with bone measurement testing to prevent osteoporotic fractures in postmenopausal women younger than 65 years who are at increased risk of osteoporosis, as determined by a formal clinical risk assessment tool. See the Clinical Considerations section for information on risk assessment.</p>">Osteoporosis Screen</a><input type="text" placeholder="DEXA/BMD (Bone mineral density)"></div>
+            <div class="screening" id="OsteoporosisRiskAssessment"><a class="screening_title" href="javascript:void(0);" info="<h3>Osteoporosis Risk Assessment</h3><p>The USPSTF recommends screening for osteoporosis with bone measurement testing to prevent osteoporotic fractures in postmenopausal women younger than 65 years who are at increased risk of osteoporosis, as determined by a formal clinical risk assessment tool.</p><p>A 10-year FRAX score &gt; 8.4% indicates need for DEXA.">Osteoporosis Risk Assessment</a><a href="https://www.sheffield.ac.uk/FRAX/tool.aspx" target="_blank" style="float: right; margin-right: 1em;">Risk tool</a><input type="text" placeholder="Score"></div>
+            <div class="screening" id="PartnerViolence"><a class="screening_title" href="javascript:void(0);" info="<h3>Partner Violence</h3><p>The USPSTF recommends that clinicians screen for intimate partner violence (IPV) in women of reproductive age and provide or refer women who screen positive to ongoing support services.</p><p>Ask the patient, without the partner present (or able to listen in), if she feels safe at home.</p><p>Note: For the purposes of this tool, I'm calling 'reproductive age' 18-50 years old.</p>">Partner Violence Screen</a><input type="text" placeholder="Screen date"></div>
+            <div class="screening" id="StatinUse"><a class="screening_title" href="javascript:void(0);" info="<h3>Statin Use</h3><p>The USPSTF recommends that clinicians prescribe a statin for the primary prevention of CVD for adults aged 40 to 75 years who have 1 or more CVD risk factors (i.e. dyslipidemia, diabetes, hypertension, or smoking) and an estimated 10-year risk of a cardiovascular event of 10% or greater.</p>">Statin Use</a><a href="https://www.mdcalc.com/calc/3398/ascvd-atherosclerotic-cardiovascular-disease-2013-risk-calculator-aha-acc" target="_blank" style="float: right; margin-right: 1em;">ASCVD Risk Calculator</a><input type="text" placeholder="10yr ASCVD risk &amp; LDL goal if applicable"></div>
+            <div class="screening" id="Tuberculosis"><a class="screening_title" href="javascript:void(0);" info="<h3>Tuberculosis</h3><p>The USPSTF recommends screening for latent tuberculosis infection (LTBI) in populations at increased risk.</p><p>Populations at increased risk for LTBI... include persons who were born in, or are former residents of, countries with increased tuberculosis prevalence (Mexico, Phillipines, Vietnam, India, China, Haiti, Guatemala) and persons who live in, or have lived in, high-risk congregate settings (eg, homeless shelters and correctional facilities).</p><p>If no high risk criteria is met, screening is done.</p>">Tuberculosis Screen</a><input type="text" placeholder="Screen date"></div>
+            <div class="screening" id="TetanusVaccine"><a class="screening_title" href="javascript:void(0);" info="<h3>Tetanus Vaccine</h3><p>Give adults who have never received Tdap a single dose of Tdap. This can be given at any time, regardless of when they last got Td. This should be followed by either a Td or Tdap booster every 10 years.</p>">Tetanus Vaccine</a><input type="text" placeholder="Vaccine type (DTaP, TDaP, Td) Date last given"></div>
+            <div class="screening" id="ShinglesVaccine"><a class="screening_title" href="javascript:void(0);" info="<h3>Shingles Vaccine</h3><p>CDC recommends two doses of Shingrix separated by 2 to 6 months for immunocompetent adults aged 50 years and older: even if they've had shingles before or had a prior vaccination with zostava.</p>">Shingles Vaccine</a><input type="text" placeholder="Date last given"></div>
+            <div class="screening" id="PneumoniaVaccine"><a class="screening_title" href="javascript:void(0);" info="<h3>Pneumonia Vaccine</h3><p>CDC recommends PCV15 or PCV20 for adults 65 years or older and adults 19 through 64 years old with certain medical conditions or risk factors. If PCV15 is used, this should be followed by a dose of PPSV23.</p>">Pneumonia Vaccine</a><input type="text" placeholder="Type of vaccine (PCV13/PCV15/PCV20/PPSV23) and date last given"></div>
+            <div class="screening" id="HepBVaccine"><a class="screening_title" href="javascript:void(0);" info="<h3>Hepatitis B Vaccine</h3><p>The ACIP recommends universal hepatitis B vaccination for adults 19 to 59 years of age. The ACIP also continues to recommend vaccinating adults 60 years and older with risk factors for hepatitis B and states that adults 60 years and older without known risk factors may be vaccinated.</p><p>Does the patient have 3 vaccinations with Hep B in their record? Or are they immunocompetent and have antibodies against Hep B? If so, no need for vaccine.</p>">Hep B Vaccine</a><input type="text" placeholder="Date last given &amp; number of times"></div>
+            <div class="screening" id="HPVVaccine"><a class="screening_title" href="javascript:void(0);" info="<h3>HPV Vaccine</h3><p>Complete 2 doses prior to 15th birthday, separated by at least 6 months. After age 15-25 and for anyone immunocompromised, give 3 doses at 0, 2, and 6 months.</p>">HPV Vaccine</a><input type="text" placeholder="Dates given"></div>
+            <div class="screening" id="InfluenzaVaccine"><a class="screening_title" href="javascript:void(0);" info="<h3>InfluenzaVaccine</h3><p>Everyone 6 months and older should get a flu vaccine every season with rare exceptions. The exact timing and duration of flu seasons varies, but influenza activity often begins to increase in October. Flu intensity often sharply declines in April</p>">Influenza Vaccine</a><input type="text" placeholder="DUE"></div>
+            <!--Obesity, Alcohol, and Drugs should be screened each visit anyway-->
+        </form>
+    </div>
+    <div id="right">
+        <textarea id="reciever" autocomplete="off"></textarea>
+    </div>
+
+    <div id="generate_btn"><a href="javascript:void(0);">Generate →</a></div>
+    <div id="parse_btn"><a href="javascript:void(0);">← Parse</a></div>
+    
+    <div id="info_box"></div>
+</body>
+<script src="js/split_lines.js"></script>
+<script src="js/strip.js"></script>
+<script src="js/eval_visibles.js"></script>
+<script src="js/generate_output.js"></script>
+<script src="js/get_info.js"></script>
+<script src="js/parse_text.js"></script>
+<script src="js/process_input.js"></script>
+<script src="js/setup.js"></script>
+</html>

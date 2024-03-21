@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Type=Link
+Name=Global Service Center Portal
+Comment=A site for reporting IT related issues
+Icon=firefox
+URL=https://dashboard-gsc.health.mil/portal/
+Keywords=gsc; global; service; center; systems; it; computer; troubleshoot

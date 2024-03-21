@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>EKG Checklist</title>
+    <meta name="author" content="doakey3">
+    <meta name="description" content="A checklist of questions you should ask about every EKG you encounter.">
+    <meta name="keywords" content="ekg, interpretation, electrocardiogram, checklist, helper">
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <form id="main_form" autocomplete="off">
+        <table class="selection">
+            <tr>
+                <td><label>What is the patient's age?</label></td>
+                <td><input class="integer_only limit3" type="text" id="age">
+            </tr>
+            <tr>
+                <td>
+                    <label>What is the patient's gender at birth?</label>
+                    <div class="info"><p>Normal QT duration, Cornell Criteria, and others are affected by gender.</p></div>
+                </td>
+                <td>
+                    <select>
+                        <option></option>
+                        <option>Male</option>
+                        <option>Female</option>
+                    </select>
+                </td>
+            </tr>
+            <tr><td colspan=2><h3>Rate</h3></td></tr>
+            <tr>
+                <td>
+                    <label>What is the heart rate (bpm)?</label>
+                    <div class="info">
+                        <ul>
+                            <li>Normal heart rate is between 60 and 100 bpm</li>
+                            <li>For an irregular heartbeat, the approximate heart rate can be calculated by counting the number of R waves on a rhythm strip and multiplying by 10.</li>
+                            <li>For regular heartbeats, the rate can be found by counting the number of large boxes between R to R waves.<br>
+                                <table style="width: 100%;">
+                                    <tr>
+                                        <td>
+                                            <table>
+                                                <tr>
+                                                    <td>1 Box:</td><td>300 bpm</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2 Boxes:</td><td>150 bpm</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3 Boxes:</td><td>100 bpm</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>4 Boxes:</td><td>75 bpm</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>5 Boxes:</td><td>60 bpm</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>6 Boxes:</td><td>50 bpm</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>7 Boxes:</td><td>43 bpm</td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                        <td style="text-align: center; vertical-align: middle;">
+                                            <img src="media/counting_rate.jpg">
+                                        </td>
+                                    </tr>
+                                </table>
+                            </li>
+                        </ul>
+                    </div>
+                </td>
+                <td><input class="integer_only limit3" type="text" id="heart_rate"></td>
+            </tr>
+            <tr><td colspan=2><h3>Rhythm</h3></td></tr>
+            <tr>
+                <td><label>Is the rhythm regular or irregular?</label></td>
+                <td>
+                    <select id="regularity">
+                        <option></option>
+                        <option>Regular</option>
+                        <option>Irregular</option>
+                    </select>
+                </td>
+            </tr>
+            <tr><td colspan=2><h3>Sinus</h3></td></tr>
+            <tr>
+                <td><label>Is there a P-wave before every QRS complex?</label></td>
+                <td>
+                    <select id="p_waves_present">
+                        <option></option>
+                        <option>Yes</option>
+                        <option>No</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Are the P-waves consistent?</label></td>
+                <td>
+                    <select id="consistent_p_waves">
+                        <option></option>
+                        <option>Yes</option>
+                        <option>No</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Is the P-wave upright in lead I?</label></td>
+                <td>
+                    <select id="p_wave_lead_i_upright">
+                        <option></option>
+                        <option>Yes</option>
+                        <option>No</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Is the P-wave upright in lead aVF?</label></td>
+                <td>
+                    <select id="p_wave_lead_avf_upright">
+                        <option></option>
+                        <option>Yes</option>
+                        <option>No</option>
+                    </select>
+                </td>
+            </tr>
+            <tr><td colspan=2><h3>Axis</h3></td></tr>
+            <tr>
+                <td><label>Is the QRS upright in lead I?</label></td>
+                <td>
+                    <select>
+                        <option></option>
+                        <option>Yes</option>
+                        <option>No</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Is the QRS upright in lead aVF?</label></td>
+                <td>
+                    <select>
+                        <option></option>
+                        <option>Yes</option>
+                        <option>No</option>
+                    </select>
+                </td>
+            </tr>
+            <tr><td colspan=2><h3>P-wave</h3></td></tr>
+            <tr>
+                <td><label>Is the P-wave amplitude greater than 2.5 small boxes in leads II, III, and aVF or is the amplitude greater than 1.5 small boxes in leads V1 or V2?</label></td>
+                <td>
+                    <select>
+                        <option></option>
+                        <option>Yes</option>
+                        <option>No</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <!--If not, then suspicious for limb lead placement error-->
+                <td><label>Is the P-wave inverted in lead avR?</label></td>
+                <td>
+                    <select>
+                        <option></option>
+                        <option>Yes</option>
+                        <option>No</option>
+                    </select>
+                </td>
+            </tr>
+            <tr><td colspan=2><h3>PR Interval</h3></td></tr>
+            <tr>
+                <td><label>Is the PR interval shorter than 120 ms (3 small boxes)?</label></td>
+                <td>
+                    <select>
+                        <option></option>
+                        <option>Yes</option>
+                        <option>No</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Is the PR interval longer than 200 ms (5 small boxes)?</label></td>
+                <td>
+                    <select>
+                        <option></option>
+                        <option>Yes</option>
+                        <option>No</option>
+                    </select>
+                </td>
+            </tr>
+            <tr><td colspan=2><h3>QRS complex</h3></td></tr>
+            <tr>
+                <td><label>Is the QRS complex longer than 120 ms (3 small boxes)?</label></td>
+                <td>
+                    <select>
+                        <option></option>
+                        <option>Yes</option>
+                        <option>No</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <!--If inverted, suspect LBBB, if upright suspect RBBB--> 
+                <td><label>Are the latter forces of the QRS complex inverted in V1?</label></td>
+                <td>
+                    <select>
+                        <option></option>
+                        <option>Yes</option>
+                        <option>No</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <!--Delayed intrinsicoid deflection? If not and the QRS is inverted in V1, then it is a nonspecific interventricular conduction delay-->
+                <td><label>Is the delay between the start of the QRS complex and the peak of the R wave longer than 60 ms (1.5 small boxes)?</label></td>
+                <td>
+                    <select>
+                        <option></option>
+                        <option>Yes</option>
+                        <option>No</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Are there pathologic Q waves present?</label>
+                    <div class="info">
+                        <p>Pathologic Q waves mus be greater than or equal to 30 ms wide (1.5 small boxes) and 0.1 mV (1 small box) deep in anterior (V3-V4) or anteroseptal (V1-3) leads; Q wave width may only be 20 ms wide in V2-V3.</p>
+                    </div>
+                </td>
+                <td>
+                    <select>
+                        <option></option>
+                        <option>Yes</option>
+                        <option>No</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Which leads have pathologic Q waves?</label></td>
+                <td>
+                    <table class="lead_selection">
+                        <colgroup>
+                            <col width="10%">
+                            <col width="40%">
+                            <col width="10%">
+                            <col width="40%">
+                        </colgroup>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td><label>I</label></td>
+                            
+                            <td><input type="checkbox"></td>
+                            <td><label>aVR</label></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td><label>II</label></td>
+                            
+                            <td><input type="checkbox"></td>
+                            <td><label>aVL</label></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td><label>III</label></td>
+                            
+                            <td><input type="checkbox"></td>
+                            <td><label>aVF</label></td>
+                        </tr>
+                        
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td><label>V1</label></td>
+                            
+                            <td><input type="checkbox"></td>
+                            <td><label>V4</label></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td><label>V2</label></td>
+                            
+                            <td><input type="checkbox"></td>
+                            <td><label>V5</label></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td><label>V3</label></td>
+                            
+                            <td><input type="checkbox"></td>
+                            <td><label>V6</label></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr><td colspan=2><h3>LVH</h3></td></tr>
+            <tr>
+                <td><label>What is height of the S-wave in V1?</label></td>
+                <td><input class="integer_only limit2" type="text" id="s_wave_height_v1">
+            </tr>
+            <tr>
+                <td><label>What is height of the R-wave in V5?</label></td>
+                <td><input class="integer_only limit2" type="text" id="r_wave_height_v5">
+            </tr>
+            <tr>
+                <td><label>What is height of the R-wave in V6?</label></td>
+                <td><input class="integer_only limit2" type="text" id="r_wave_height_v6">
+            </tr>
+            <tr>
+                <td><label>What is height of the R-wave in avL?</label></td>
+                <td><input class="integer_only limit2" type="text" id="r_wave_height_avl">
+            </tr>
+            <tr>
+                <td><label>What is height of the S-wave in V3?</label></td>
+                <td><input class="integer_only limit2" type="text" id="s_wave_height_v3">
+            </tr>
+            
+            <tr>
+                <td colspan=2><h3>ST Segment</h3></td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Is there significant ST elevation?</label>
+                    <div class="info">
+                        <p>ST elevation in 2 contiguous leads greater than or equal to 2mm in men or 1.5 mm in women in V2-3 and/or 1mm in other anterior or anteroseptal leads.</p>
+                        <br>
+                        <img src="media/contiguous.jpg">
+                    </div>
+                </td>
+                <td>
+                    <select>
+                        <option></option>
+                        <option>Yes</option>
+                        <option>No</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+<script src="js/setup_integer_only_inputs.js"></script>
+<script src="js/setup_infos.js"></script>
+<script src="js/setup_evaluate_answers.js"></script>
+
+</html>

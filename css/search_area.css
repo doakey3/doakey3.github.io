@@ -1,0 +1,70 @@
+#search_area {
+    width: 100%;
+}
+
+table#search_area_container {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#searchbar {
+    font-size: 16px;    
+    font-family: tahoma;
+    line-height: 32px;
+    padding-left: 32px;
+    width: 100%;
+    box-sizing: border-box;
+    background-position: 5px;
+    background-repeat: no-repeat;
+    background-image: url("../icons/search.svg");
+}
+
+#searchbar::placeholder {
+  color: black;
+  opacity: 1;
+}
+
+#searchbar:-ms-input-placeholder {
+  color: black;
+}
+
+#download_button {
+    width: 32px;
+    height: 32px;
+    border: 3px solid transparent;
+    border-radius: 5px;
+    padding-left: 4px;
+    background-color: gray;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 22px;
+    background-image: url("../icons/download.svg");
+}
+
+#download_button:hover {
+    border: 3px solid orange;
+}
+
+#download_button:active {
+    background-color: orange;
+}
+
+#add_row_button {
+    width: 32px;
+    height: 32px;
+    background-color: green;
+    border: 3px solid transparent;
+    border-radius: 5px;
+    background-image: url("../icons/add.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 16px;
+}
+
+#add_row_button:hover {
+    border: 3px solid orange;
+}
+
+#add_row_button:active {
+    background-color: orange;
+}

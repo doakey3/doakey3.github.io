@@ -1,0 +1,99 @@
+body {
+    margin: 0;
+    position: absolute;
+    overflow: visible;
+}
+#container {
+    background-color: white;
+}
+table#feet_container {
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+}
+table#feet_container td {
+    position: relative;
+    white-space: nowrap;
+}
+img {
+    user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+img.foot {
+    width: 200px;
+    padding-right: 10px;
+}
+img.reversed {
+    transform: scaleX(-1);
+}
+.tool_selector {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    border: 1px solid black;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 24px;
+}
+.tool_selector:hover {
+    background-color: #f9fff0;
+}
+.tool_selector:active {
+    background-color: #dcffa8;
+}
+#negative_tool {
+    right: 276px;
+    top: 33px;
+}
+#positive_tool {
+    right: 276px;
+    top: 0;
+}
+#negative_label,
+#positive_label {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 0;
+    top: 0;
+    height: 32px;
+    width: 275px;
+    border: 1px solid black;
+}
+#negative_label {
+    top: 33px;
+}
+.placed {
+    position: absolute;
+    z-index: 2;
+    height: 32px;
+    width: 32px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 24px;
+}
+#current_tool_indicator {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 3;
+    width: 32px;
+    height: 32px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 24px;
+    display: none;
+    pointer-events: none;
+    opacity: 0.33;
+}
+.sensitive {
+    background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%203.092%203.096%22%20height%3D%2211.703%22%20width%3D%2211.685%22%3E%3Cpath%20d%3D%22M1.833%200v1.264h1.259v.569h-1.26v1.263H1.26V1.833H0v-.57h1.259V0z%22%20font-weight%3D%22700%22%20font-size%3D%224.939%22%20aria-label%3D%22%2B%22%20font-family%3D%22Myriad%20Pro%22%20letter-spacing%3D%220%22%20word-spacing%3D%220%22%20stroke-width%3D%22.265%22/%3E%3C/svg%3E%0A");
+}
+.lops {
+    background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%203.092%203.096%22%20height%3D%2211.703%22%20width%3D%2211.685%22%3E%3Cg%20aria-label%3D%22%2B%22%3E%3Cpath%20d%3D%22M.153%201.124h2.785v.848H.153z%22%20aria-label%3D%22-%22%20font-size%3D%2210.583%22%20fill%3D%22red%22%20stroke-width%3D%22.07%22%20font-weight%3D%22400%22%20font-family%3D%22Myriad%20Pro%22%20letter-spacing%3D%220%22%20word-spacing%3D%220%22/%3E%3C/g%3E%3C/svg%3E%0A");
+}

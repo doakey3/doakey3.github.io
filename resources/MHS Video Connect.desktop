@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Type=Link
+Name=MHS Video Connect
+Comment=For viewing video connect appointment times
+Icon=firefox
+URL=https://scheduling.v3.health.mil/welcome/
+Keywords=mhs; video; connect; telehealth; skype; zoom; call

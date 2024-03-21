@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Type=Link
+Name=Tricare Formulary Search
+Comment=For determining whether a medication is covered by the military. You can download PDF prior authorizations here too.
+Icon=firefox
+URL=https://www.express-scripts.com/frontend/open-enrollment/tricare/fst#/
+Keywords=medication; prior; authorization; express; scripts; military; link; tricare; formulary; search

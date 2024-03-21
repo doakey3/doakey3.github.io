@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Type=Link
+Name=Cerner eService
+Comment=For reviewing tickets in the Cerner system.
+Icon=firefox
+URL=https://eservice.cerner.com/ServiceRecords
+Keywords=cerner; support; eservice; service; ticket; problem; genesis

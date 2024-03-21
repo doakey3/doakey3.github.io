@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>BPH Template</title>
+    <meta name="author" content="doakey3">
+    
+    <meta name="author" content="doakey3"> 
+    <meta name="description" content="A template for charting on BPH">
+    <meta name="keywords" content="bph, benign, prostatic, hyperplasia, hypertrophy">
+    
+    <link rel="stylesheet" href="css/grow_wrap.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+<h1>BPH Template</h1>
+<div class="grow-wrap">
+<textarea class="checkable resizable" spellcheck="false" autocomplete="off">
+AUA Symptom Score for BPH: [SYMPTOM SCORE]; NOTE: 0-7 = mild, 8-19 = moderate, 20-35 = severe
+
+Patient using the following medications that may contribute to symptoms ("X" = patient taking)
+(    ) Antihistamines (decrease parasympathetic tone)
+(    ) Decongestants (increase sphincter tone)
+(    ) Diuretics (increase urine production)
+(    ) Opiates (impair autonomic function)
+(    ) Tricyclic antidepressants (anticholinergic effect)
+
+Medication conditions that may increase symptoms ("X" = patient taking)
+(    ) Bladder cancer
+(    ) Congestive heart failure
+(    ) Diabetes
+(    ) Parkinson's disease
+(    ) Prostate cancer
+
+Plan:
+-digital rectal exam unremarkable
+-enlarged prostate on digital rectal exam
+    -plan to get PSA
+    -start finasteride 5 mg PO daily and continue for at least 6 months
+-palpable nodule on prostate, patient referred to urology
+-check urinalysis for blood (if blood will workup for bladder cancer)
+-mild symptoms, plan to have the patient follow up in 1 year
+-moderate symptoms, start tamsulosin 0.4 mg PO daily and follow up in 4 weeks
+-patient warned about the risk of orthostatic hypotension while taking tamsulosin
+
+</textarea>
+</div>
+
+<div id="notes">
+    <a href="https://www.mdapp.co/aua-symptom-score-for-bph-calculator-526/">AUA Symptom Score for BPH</a>
+    
+    <p>When a patient is taking finasteride, you must double the result of the PSA when interpredint to correct for the effect of the medication</p>
+</div>
+
+<div id="references">
+    <h2>References</h2>
+    <ul>
+        <li>Uptodate. <a href="https://www.uptodate.com/contents/barretts-esophagus-epidemiology-clinical-manifestations-and-diagnosis">Barrett's esophagus: Epidemiology, clinical manifestations, and diagnosis</a>. Whom to screen is somewhat controversial. I used the list of risk factors from this page.</li>
+        <li>Uptodate <a href="https://www.uptodate.com/contents/medical-treatment-of-benign-prostatic-hyperplasia">Medical treatment of benign prostatic hyperplasia</a></li>
+        <li>AAFP. <a href="https://www.aafp.org/pubs/afp/issues/2008/0515/p1403.html">Diagnosis and Management of Benign Prostatic Hyperplasia</a></li>
+    </ul>
+</div>
+
+<div id="disclaimer">
+    <p>This page was last updated on <span class="last_updated"></span></p>
+    <p><b>Disclaimer</b>: Information presented in the template should be re-checked and should not be used alone to guide patient care or substitute for clinical judgement.</p>
+    <p><b>Note</b>: Please copy text into the EMR prior to adding any HIPPA information. Though no information is being saved/transmitted on this site, typing private information into a web page is generally bad practice.</p>
+</div>
+
+</body>
+
+<script src="js/setup_resizables.js"></script>
+<script src="js/setup_boxes.js"></script>
+<script>
+    var textarea = document.getElementsByClassName("checkable")[0];
+    textarea.focus();
+</script>
+<script>
+    last_updateds = document.getElementsByClassName("last_updated");
+    for (var i = 0; i < last_updateds.length; i++) {
+        var mydate = new Date(document.lastModified);
+        var newdate = new Intl.DateTimeFormat("en-US", {year: "numeric", month: "long", day: "numeric"}).format(mydate).replace(/\./g, '-');
+        last_updateds[i].innerHTML = newdate;
+    } 
+</script>
+</html>

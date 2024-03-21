@@ -1,0 +1,71 @@
+#lookup_area {
+    position: absolute;
+    top: 48px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: scroll;
+}
+
+#lookup_table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+#lookup_table tr {
+    background-color: #e6e6e6;
+    cursor: default;
+}
+
+#lookup_table tr:nth-child(2n) {
+    background-color: #cccccc;
+}
+
+#lookup_table td, #lookup_table th {
+    border: 3px solid transparent;
+    border-left: none;
+    border-right: none;
+    padding: 0;
+    margin: 0;
+    vertical-align: middle;
+}
+
+#lookup_table tr td:first-child, #lookup_table tr th:first-child {
+    border-left: 3px solid transparent;
+}
+
+#lookup_table tr td:last-child, #lookup_table tr th:last-child {
+    border-right: 3px solid transparent;
+}
+
+#lookup_table tr:hover td, #lookup_table tr:hover th, #lookup_table tr.selected td, #lookup_table tr.selected th {
+    border-color: blue;
+}
+
+.text {
+    display: block;
+    white-space: nowrap;
+    width: min-content;
+    line-height: 28px;
+    padding-left: 6px;
+    color: black;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: center;
+    padding-bottom: 3px;
+}
+
+.icon {background-image: url("../icons/html.svg")}
+.icon.pdf {background-image: url("../icons/pdf.svg")}
+.icon.desktop {background-image: url("../icons/link.svg")}
+.icon.ppt {background-image: url("../icons/ppt.svg")}
+.icon.svg {background-image: url("../icons/svg.svg")}
+.icon.csv {background-image: url("../icons/csv.svg")}
+.icon.doc, .icon.docx {background-image: url("../icons/doc.svg")}
+.icon.txt {background-image: url("../icons/txt.svg")}
